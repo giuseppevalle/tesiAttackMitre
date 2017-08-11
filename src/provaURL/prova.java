@@ -147,6 +147,7 @@ public class prova {
 		    	p[n-1001] = new Technique(n,tokenNAME);
 		    	p[n-1001].addPlatform("aaa");
 		    	p[n-1001].addPlatform("aaa");
+
 		    	System.out.println(p[n-1001].getID());
 		    	System.out.println(p[n-1001].getName());
 		    	
