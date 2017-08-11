@@ -1,0 +1,652 @@
+null<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Credential Dumping - enterprise</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Technique/T1003","wgTitle":"Technique/T1003","wgCurRevisionId":1338,"wgRevisionId":1338,"wgArticleId":189,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Credential Access","Technique"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Technique/T1003","wgRelevantArticleId":189,"wgRequestId":"WY1uvGKSegNabbk7LknqpAAAAAY","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"srfFilteredConfig":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":false},"wgHeaderTabsTabIndexes":[],"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":false,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/w/extensions/PageForms","edgValues":[],"wgPageFormsEDSettings":null,"egMapsDebugJS":false,"egMapsAvailableServices":["googlemaps3","openlayers","leaflet"],"InactivityTimeout":{"timeout":3600000,"message":"This session will be logged out in one minute if there is no activity."},"wgJSBreadCrumbsCSSSelector":"#top","wgJSBreadCrumbsMaxCrumbs":5,"wgJSBreadCrumbsShowSidebar":true,"wgJSBreadCrumbsPervasiveWikiFarm":false,"wgJSBreadCrumbsSeparator":"»","wgJSBreadCrumbsCookiePath":"/","wgJSBreadCrumbsLeadingDescription":"Last Pages Viewed","wgJSBreadCrumbsShowSiteName":false,"wgJSBreadCrumbsPageName":"Credential Dumping"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.scite.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@0syrvvp",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.smw.style","mediawiki.page.startup","ext.scite.styles","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.scite.styles%7Cext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0"/>
+<link rel="ExportRDF" type="application/rdf+xml" title="Technique/T1003" href="/w/index.php?title=Special:ExportRDF/Technique/T1003&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="enterprise (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://attack.mitre.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="/wiki/MediaWiki:Copyright"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Technique_T1003 rootpage-Technique_T1003 skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Credential Dumping</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From enterprise</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="hf-nsheader"></div><div class="hf-header"></div><table class="infobox" cellspacing="3" style="border-spacing:3px;width:22em;"><tr><th colspan="2" style="text-align:center;font-size:125%;font-weight:bold;">Credential Dumping</th></tr><tr><th colspan="2" style="text-align:center;">Technique</th></tr><tr><th scope="row" style="text-align:left;">ID</th><td>
+T1003</td></tr><tr><th scope="row" style="text-align:left;">Tactic</th><td>
+Credential Access</td></tr><tr><th scope="row" style="text-align:left;">Platform</th><td>
+<span class="nowrap">Windows Server 2003</span>, <span class="nowrap">Windows Server 2003 R2</span>, <span class="nowrap">Windows Server 2008</span>, <span class="nowrap">Windows Server 2008 R2</span>, <span class="nowrap">Windows Server 2012</span>, <span class="nowrap">Windows Server 2012 R2</span>, <span class="nowrap">Windows XP</span>, <span class="nowrap">Windows Vista</span>, <span class="nowrap">Windows 7</span>, <span class="nowrap">Windows 8</span>, <span class="nowrap">Windows 8.1</span>, <span class="nowrap">Windows 10</span></td></tr><tr><th scope="row" style="text-align:left;">Permissions Required</th><td>
+Administrator, SYSTEM</td></tr><tr><th scope="row" style="text-align:left;">Data Sources</th><td>
+<span class="nowrap">API monitoring</span>, <span class="nowrap">Process command-line parameters</span>, <span class="nowrap">Process monitoring</span>, <span class="nowrap">PowerShell logs</span></td></tr><tr><th scope="row" style="text-align:left;">CAPEC ID</th><td>
+<a rel="nofollow" class="external text" href="https://capec.mitre.org/data/definitions/567.html">CAPEC-567</a></td></tr><tr><th scope="row" style="text-align:left;">Contributors</th><td>
+<span class="nowrap">Vincent Le Toux</span></td></tr></table>
+<p>Credential dumping is the process of obtaining account login and password information from the operating system and software. Credentials can be used to perform <a href="/wiki/Lateral_Movement" title="Lateral Movement">Lateral Movement</a> and access restricted information.
+</p><p>Tools may dump credentials in many different ways: extracting credential hashes for offline cracking, extracting plaintext passwords, and extracting Kerberos tickets, among others. Examples of credential dumpers include pwdump7, <a href="/wiki/Software/S0005" title="Software/S0005">Windows Credential Editor</a>, <a href="/wiki/Software/S0002" title="Software/S0002">Mimikatz</a>, and <a href="/wiki/Software/S0008" title="Software/S0008">gsecdump</a>. These tools are in use by both professional security testers and adversaries.
+</p><p>Plaintext passwords can be obtained using tools such as <a href="/wiki/Software/S0002" title="Software/S0002">Mimikatz</a> to extract passwords stored by the Local Security Authority (LSA). If smart cards are used to authenticate to a domain using a personal identification number (PIN), then that PIN is also cached as a result and may be dumped.<span id="scite-ref-9cab363c426b80c420cc0b022ff40fec-1-a" class="scite-citeref-number" data-reference="Github Mimikatz Module sekurlsa"><a href="#scite-9cab363c426b80c420cc0b022ff40fec">1</a></span>
+</p><p>DCSync is a variation on credential dumping which can be used to acquire sensitive information from a domain controller. The action works by simulating a domain controller replication process from a remote domain controller, which may contain various pieces of information included in Active Directory such as passwords, historical hashes, and current hashes of potentially useful accounts, such as the KRBTGT account NTLM hash. Any members of the Administrators, Domain Admins, Enterprise Admin groups or computer accounts on the domain controller are able to run DCSync to pull password data.<span id="scite-ref-254cdc45583d463b3ba4c69880e905ae-2-a" class="scite-citeref-number" data-reference="ADSecurity Mimikatz DCSync"><a href="#scite-254cdc45583d463b3ba4c69880e905ae">2</a></span> The hashes can then in turn be used to create a Golden Ticket for use in <a href="/wiki/Technique/T1097" title="Technique/T1097">Pass the Ticket</a>.<span id="scite-ref-0c005d8c3134d5c5ab70a3bfe127d4a9-3-a" class="scite-citeref-number" data-reference="Harmj0y Mimikatz and DCSync"><a href="#scite-0c005d8c3134d5c5ab70a3bfe127d4a9">3</a></span> DCSync functionality has been included in the "lsadump" module in Mimikatz.<span id="scite-ref-37e18b924baf59c9bb150bcdb8a27760-4-a" class="scite-citeref-number" data-reference="GitHub Mimikatz lsadump Module"><a href="#scite-37e18b924baf59c9bb150bcdb8a27760">4</a></span>
+</p><p>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Examples"><span class="tocnumber">1</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1"><a href="#Mitigation"><span class="tocnumber">2</span> <span class="toctext">Mitigation</span></a></li>
+<li class="toclevel-1"><a href="#Detection"><span class="tocnumber">3</span> <span class="toctext">Detection</span></a></li>
+<li class="toclevel-1"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<ul>
+	<li><a href="/wiki/Group/G0006" title="Group/G0006">APT1</a> has been known to use credential dumping.<span id="scite-ref-3445f4a084afab5d99bcdb7b0ac91a6f-5-a" class="scite-citeref-number" data-reference="Mandiant APT1"><a href="#scite-3445f4a084afab5d99bcdb7b0ac91a6f">5</a></span></li>
+	<li><a href="/wiki/Group/G0007" title="Group/G0007">APT28</a> regularly deploys both publicly available and custom password retrieval tools on victims.<span id="scite-ref-c6944c9f1c690dc6436265586224221f-6-a" class="scite-citeref-number" data-reference="ESET Sednit Part 2"><a href="#scite-c6944c9f1c690dc6436265586224221f">6</a></span></li>
+	<li><a href="/wiki/Group/G0022" title="Group/G0022">APT3</a> has used a tool to dump credentials by injecting itself into lsass.exe and triggering with the argument "dig." The group has also used a tools to dump passwords from browsers.<span id="scite-ref-646ac16795e474906e8d77818d2879d9-7-a" class="scite-citeref-number" data-reference="Symantec Buckeye"><a href="#scite-646ac16795e474906e8d77818d2879d9">7</a></span></li>
+	<li><a href="/wiki/Group/G0001" title="Group/G0001">Axiom</a> has been known to dump credentials.<span id="scite-ref-2c5d94dd609855f43c21c46744afec3d-8-a" class="scite-citeref-number" data-reference="Axiom"><a href="#scite-2c5d94dd609855f43c21c46744afec3d">8</a></span></li>
+	<li><a href="/wiki/Group/G0003" title="Group/G0003">Cleaver</a> has been known to dump credentials.<span id="scite-ref-9527aa2f12c070963c63670a7afdf1b0-9-a" class="scite-citeref-number" data-reference="Cylance Cleaver"><a href="#scite-9527aa2f12c070963c63670a7afdf1b0">9</a></span></li>
+	<li><a href="/wiki/Group/G0037" title="Group/G0037">FIN6</a> has used <a href="/wiki/Software/S0005" title="Software/S0005">Windows Credential Editor</a> for credential dumping, as well as Metasploit’s <a href="/wiki/Software/S0029" title="Software/S0029">PsExec</a> NTDSGRAB module to obtain a copy of the victim's Active Directory database.<span id="scite-ref-07c84dc23d751e92b17ba14ed8811db8-10-a" class="scite-citeref-number" data-reference="FireEye FIN6 April 2016"><a href="#scite-07c84dc23d751e92b17ba14ed8811db8">10</a></span></li>
+	<li><a href="/wiki/Group/G0004" title="Group/G0004">Ke3chang</a> dumps credentials.<span id="scite-ref-c725b326316e848c4f9b2938d0ec5b27-11-a" class="scite-citeref-number" data-reference="Villeneuve et al 2014"><a href="#scite-c725b326316e848c4f9b2938d0ec5b27">11</a></span></li>
+	<li><a href="/wiki/Group/G0021" title="Group/G0021">Molerats</a> used the public tool BrowserPasswordDump10 to dump passwords saved in browsers on victims.<span id="scite-ref-29d43b1d24c0492e24102fd9fa64563b-12-a" class="scite-citeref-number" data-reference="DustySky"><a href="#scite-29d43b1d24c0492e24102fd9fa64563b">12</a></span></li>
+	<li><a href="/wiki/Group/G0040" title="Group/G0040">Patchwork</a> dumped the login data database from <code>\AppData\Local\Google\Chrome\User Data\Default\Login Data</code>.<span id="scite-ref-2af1a214ecb9c2658d4b51aaece3468e-13-a" class="scite-citeref-number" data-reference="Cymmetria Patchwork"><a href="#scite-2af1a214ecb9c2658d4b51aaece3468e">13</a></span></li>
+	<li><a href="/wiki/Group/G0033" title="Group/G0033">Poseidon Group</a> conducts credential dumping on victims, with a focus on obtaining credentials belonging to domain and database servers.<span id="scite-ref-1f1991f120c32969c526a1c2d182b579-14-a" class="scite-citeref-number" data-reference="Kaspersky Poseidon Group"><a href="#scite-1f1991f120c32969c526a1c2d182b579">14</a></span></li>
+	<li><a href="/wiki/Group/G0038" title="Group/G0038">Stealth Falcon</a> malware gathers passwords from multiple sources, including Windows Credential Vault, Internet Explorer, Firefox, Chrome, and Outlook.<span id="scite-ref-19d2d359a2615e8dbd5041564ea3cce3-15-a" class="scite-citeref-number" data-reference="Citizen Lab Stealth Falcon May 2016"><a href="#scite-19d2d359a2615e8dbd5041564ea3cce3">15</a></span></li>
+	<li><a href="/wiki/Group/G0041" title="Group/G0041">Strider</a> has registered its persistence module on domain controllers as a Windows LSA (Local System Authority) password filter to dump credentials any time a domain, local user, or administrator logs in or changes a password.<span id="scite-ref-c4a9f1758a7f06d97d9e416ace8c5611-16-a" class="scite-citeref-number" data-reference="Kaspersky ProjectSauron Full Report"><a href="#scite-c4a9f1758a7f06d97d9e416ace8c5611">16</a></span></li>
+	<li><a href="/wiki/Group/G0039" title="Group/G0039">Suckfly</a> used a signed credential-dumping tool to obtain victim account credentials.<span id="scite-ref-4a7fb81df624aa5e56cd7f23b75206f4-17-a" class="scite-citeref-number" data-reference="Symantec Suckfly May 2016"><a href="#scite-4a7fb81df624aa5e56cd7f23b75206f4">17</a></span></li>
+	<li><a href="/wiki/Group/G0027" title="Group/G0027">Threat Group-3390</a> actors have used <a href="/wiki/Software/S0008" title="Software/S0008">gsecdump</a> and a modified version of <a href="/wiki/Software/S0002" title="Software/S0002">Mimikatz</a> called Wrapikatz to dump credentials. They have also dumped credentials from domain controllers.<span id="scite-ref-a7b8a9ff0c57e47f64f3e43e019913a0-18-a" class="scite-citeref-number" data-reference="Dell TG-3390"><a href="#scite-a7b8a9ff0c57e47f64f3e43e019913a0">18</a></span><span id="scite-ref-08a757fa132a7c05c8704b389a4a9cef-19-a" class="scite-citeref-number" data-reference="SecureWorks BRONZE UNION June 2017"><a href="#scite-08a757fa132a7c05c8704b389a4a9cef">19</a></span></li>
+	<li><a href="/wiki/Group/G0045" title="Group/G0045">menuPass</a> has used a modified version of pentesting tools wmiexec.vbs and secretsdump.py to dump credentials.<span id="scite-ref-4b90d46eb6116d75a9b866faccbb9461-20-a" class="scite-citeref-number" data-reference="PWC Cloud Hopper Technical Annex April 2017"><a href="#scite-4b90d46eb6116d75a9b866faccbb9461">20</a></span><span id="scite-ref-b4426e980a1464dd5c8fdb7776bb677f-21-a" class="scite-citeref-number" data-reference="Github AD-Pentest-Script"><a href="#scite-b4426e980a1464dd5c8fdb7776bb677f">21</a></span></li>
+	<li>Some <a href="/wiki/Software/S0093" title="Software/S0093">Backdoor.Oldrea</a> samples contain a publicly available Web browser password recovery tool.<span id="scite-ref-c95f42d9901a22935c5739cddc12d159-22-a" class="scite-citeref-number" data-reference="Symantec Dragonfly"><a href="#scite-c95f42d9901a22935c5739cddc12d159">22</a></span></li>
+	<li><a href="/wiki/Software/S0119" title="Software/S0119">Cachedump</a> can extract cached password hashes from a system’s registry.<span id="scite-ref-3445f4a084afab5d99bcdb7b0ac91a6f-5-b" class="scite-citeref-number" data-reference="Mandiant APT1"><a href="#scite-3445f4a084afab5d99bcdb7b0ac91a6f">5</a></span></li>
+	<li><a href="/wiki/Software/S0144" title="Software/S0144">ChChes</a> steals credentials stored inside Internet Explorer.<span id="scite-ref-4b90d46eb6116d75a9b866faccbb9461-20-b" class="scite-citeref-number" data-reference="PWC Cloud Hopper Technical Annex April 2017"><a href="#scite-4b90d46eb6116d75a9b866faccbb9461">20</a></span></li>
+	<li><a href="/wiki/Software/S0154" title="Software/S0154">Cobalt Strike</a> can recover hashed passwords.<span id="scite-ref-a2b5a779efe1a20438d80ed84baddfcb-23-a" class="scite-citeref-number" data-reference="cobaltstrike manual"><a href="#scite-a2b5a779efe1a20438d80ed84baddfcb">23</a></span></li>
+	<li><a href="/wiki/Software/S0050" title="Software/S0050">CosmicDuke</a> collects user credentials, including passwords, for various programs and browsers, including popular instant messaging applications, Web browsers, and email clients. Windows account hashes, domain accounts, and LSA secrets are also collected, as are WLAN keys.<span id="scite-ref-40eb3a30f4ec653c3978cd00d91d18fb-24-a" class="scite-citeref-number" data-reference="F-Secure The Dukes"><a href="#scite-40eb3a30f4ec653c3978cd00d91d18fb">24</a></span></li>
+	<li>Password stealer and NTLM stealer modules in <a href="/wiki/Software/S0046" title="Software/S0046">CozyCar</a> harvest stored credentials from the victim, including credentials used as part of Windows NTLM user authentication. <a href="/wiki/Software/S0046" title="Software/S0046">CozyCar</a> has also executed <a href="/wiki/Software/S0002" title="Software/S0002">Mimikatz</a> for further victim penetration.<span id="scite-ref-69bd59daab8cc1263bfe82a6050097dc-25-a" class="scite-citeref-number" data-reference="F-Secure CozyDuke"><a href="#scite-69bd59daab8cc1263bfe82a6050097dc">25</a></span></li>
+	<li><a href="/wiki/Software/S0115" title="Software/S0115">Crimson</a> contains a module to steal credentials from Web browsers on the victim machine.<span id="scite-ref-622257b18d53a182dbd97e7a234aefde-26-a" class="scite-citeref-number" data-reference="Proofpoint Operation Transparent Tribe March 2016"><a href="#scite-622257b18d53a182dbd97e7a234aefde">26</a></span></li>
+	<li><a href="/wiki/Software/S0120" title="Software/S0120">Fgdump</a> can dump Windows password hashes.<span id="scite-ref-3445f4a084afab5d99bcdb7b0ac91a6f-5-c" class="scite-citeref-number" data-reference="Mandiant APT1"><a href="#scite-3445f4a084afab5d99bcdb7b0ac91a6f">5</a></span></li>
+	<li><a href="/wiki/Software/S0132" title="Software/S0132">H1N1</a> dumps usernames and passwords from Firefox, Internet Explorer, and Outlook.<span id="scite-ref-45ad89c84d56e47f0b19a372dad9e2f9-27-a" class="scite-citeref-number" data-reference="Cisco H1N1 Part 2"><a href="#scite-45ad89c84d56e47f0b19a372dad9e2f9">27</a></span></li>
+	<li><a href="/wiki/Software/S0121" title="Software/S0121">Lslsass</a> can dump active logon session password hashes from the lsass process.<span id="scite-ref-3445f4a084afab5d99bcdb7b0ac91a6f-5-d" class="scite-citeref-number" data-reference="Mandiant APT1"><a href="#scite-3445f4a084afab5d99bcdb7b0ac91a6f">5</a></span></li>
+	<li><a href="/wiki/Software/S0002" title="Software/S0002">Mimikatz</a> performs credential dumping to obtain account and password information useful in gaining access to additional systems and enterprise network resources. It contains functionality to acquire information about credentials in many ways, including from LSA, SAM table, credential vault, and DCSync.<span id="scite-ref-a0fad4534237dd8fed442c144c80f621-28-a" class="scite-citeref-number" data-reference="Deply Mimikatz"><a href="#scite-a0fad4534237dd8fed442c144c80f621">28</a></span><span id="scite-ref-37e18b924baf59c9bb150bcdb8a27760-4-b" class="scite-citeref-number" data-reference="GitHub Mimikatz lsadump Module"><a href="#scite-37e18b924baf59c9bb150bcdb8a27760">4</a></span></li>
+	<li><a href="/wiki/Software/S0080" title="Software/S0080">Mivast</a> has the capability to gather NTLM password information.<span id="scite-ref-86a039a64807e1f9a86df55a2e3b0944-29-a" class="scite-citeref-number" data-reference="Symantec Backdoor.Mivast"><a href="#scite-86a039a64807e1f9a86df55a2e3b0944">29</a></span></li>
+	<li><a href="/wiki/Software/S0056" title="Software/S0056">Net Crawler</a> uses credential dumpers such as <a href="/wiki/Software/S0002" title="Software/S0002">Mimikatz</a> and <a href="/wiki/Software/S0005" title="Software/S0005">Windows Credential Editor</a> to extract cached credentials from Windows systems.<span id="scite-ref-9527aa2f12c070963c63670a7afdf1b0-9-b" class="scite-citeref-number" data-reference="Cylance Cleaver"><a href="#scite-9527aa2f12c070963c63670a7afdf1b0">9</a></span></li>
+	<li><a href="/wiki/Software/S0138" title="Software/S0138">OLDBAIT</a> collects credentials from Internet Explorer, Mozilla Firefox, Eudora, and several email clients.<span id="scite-ref-804ef0a371ff0702073f356971741ebf-30-a" class="scite-citeref-number" data-reference="FireEye APT28"><a href="#scite-804ef0a371ff0702073f356971741ebf">30</a></span></li>
+	<li><a href="/wiki/Software/S0052" title="Software/S0052">OnionDuke</a> steals credentials from its victims.<span id="scite-ref-40eb3a30f4ec653c3978cd00d91d18fb-24-b" class="scite-citeref-number" data-reference="F-Secure The Dukes"><a href="#scite-40eb3a30f4ec653c3978cd00d91d18fb">24</a></span></li>
+	<li><a href="/wiki/Software/S0048" title="Software/S0048">PinchDuke</a> steals credentials from compromised hosts. <a href="/wiki/Software/S0048" title="Software/S0048">PinchDuke</a>'s credential stealing functionality is believed to be based on the source code of the Pinch credential stealing malware (also known as LdPinch). Credentials targeted by <a href="/wiki/Software/S0048" title="Software/S0048">PinchDuke</a> include ones associated with The Bat!, Yahoo!, Mail.ru, Passport.Net, Google Talk, Netscape Navigator, Mozilla Firefox, Mozilla Thunderbird, Internet Explorer, Microsoft Outlook, WinInet Credential Cache, and Lightweight Directory Access Protocol (LDAP).<span id="scite-ref-40eb3a30f4ec653c3978cd00d91d18fb-24-c" class="scite-citeref-number" data-reference="F-Secure The Dukes"><a href="#scite-40eb3a30f4ec653c3978cd00d91d18fb">24</a></span></li>
+	<li>A module in <a href="/wiki/Software/S0113" title="Software/S0113">Prikormka</a> collects passwords stored in applications installed on the victim.<span id="scite-ref-f49c77a9eb49f300a7ed692bd3eb6e58-31-a" class="scite-citeref-number" data-reference="ESET Operation Groundbait"><a href="#scite-f49c77a9eb49f300a7ed692bd3eb6e58">31</a></span></li>
+	<li><a href="/wiki/Software/S0125" title="Software/S0125">Remsec</a> can dump the SAM database.<span id="scite-ref-e62547e60699f5ec56ef3daa94a6b126-32-a" class="scite-citeref-number" data-reference="Kaspersky ProjectSauron Technical Analysis"><a href="#scite-e62547e60699f5ec56ef3daa94a6b126">32</a></span> It also can register itself as a Windows Local System Authority password filter on domain controllers, which allows it to harvest passwords when users change passwords.<span id="scite-ref-c4a9f1758a7f06d97d9e416ace8c5611-16-b" class="scite-citeref-number" data-reference="Kaspersky ProjectSauron Full Report"><a href="#scite-c4a9f1758a7f06d97d9e416ace8c5611">16</a></span></li>
+	<li><a href="/wiki/Software/S0094" title="Software/S0094">Trojan.Karagany</a> can dump passwords and save them into <code>\ProgramData\Mail\MailAg\pwds.txt</code>.<span id="scite-ref-c95f42d9901a22935c5739cddc12d159-22-b" class="scite-citeref-number" data-reference="Symantec Dragonfly"><a href="#scite-c95f42d9901a22935c5739cddc12d159">22</a></span></li>
+	<li><a href="/wiki/Software/S0130" title="Software/S0130">Unknown Logger</a> is capable of stealing usernames and passwords from browsers on the victim machine.<span id="scite-ref-91e1bf481418fa7ac1af3de94eb1be46-33-a" class="scite-citeref-number" data-reference="Forcepoint Monsoon"><a href="#scite-91e1bf481418fa7ac1af3de94eb1be46">33</a></span></li>
+	<li><a href="/wiki/Software/S0005" title="Software/S0005">Windows Credential Editor</a> can dump credentials.<span id="scite-ref-c48c2a15dfe1d914c2c675edd958b94e-34-a" class="scite-citeref-number" data-reference="Amplia WCE"><a href="#scite-c48c2a15dfe1d914c2c675edd958b94e">34</a></span></li>
+	<li><a href="/wiki/Software/S0008" title="Software/S0008">gsecdump</a> can dump Windows password hashes and LSA secrets.<span id="scite-ref-d0e61a780f21058063ce95079f16797a-35-a" class="scite-citeref-number" data-reference="TrueSec Gsecdump"><a href="#scite-d0e61a780f21058063ce95079f16797a">35</a></span></li>
+	<li><a href="/wiki/Software/S0006" title="Software/S0006">pwdump</a> can be used to dump credentials.<span id="scite-ref-07938a82e11dcc3070ad0620dc1cbabd-36-a" class="scite-citeref-number" data-reference="Wikipedia pwdump"><a href="#scite-07938a82e11dcc3070ad0620dc1cbabd">36</a></span></li>
+</ul>
+<p>
+</p>
+<h2><span class="mw-headline" id="Mitigation">Mitigation</span></h2>
+<p>Monitor/harden access to LSASS and SAM table with tools that allow process whitelisting. Limit credential overlap across systems to prevent lateral movement opportunities using <a href="/wiki/Technique/T1078" title="Technique/T1078">Valid Accounts</a> if passwords and hashes are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Do not put user or admin domain accounts in the local administrator groups across systems unless they are tightly controlled, as this is often equivalent to having a local administrator account with the same password on all systems. On Windows 8.1 and Windows Server 2012 R2, enable Protected Process Light for LSA.<span id="scite-ref-90040a6b65b80f4d794e3aa762c0bcec-37-a" class="scite-citeref-number" data-reference="Microsoft LSA"><a href="#scite-90040a6b65b80f4d794e3aa762c0bcec">37</a></span>
+</p><p>Identify and block potentially malicious software that may be used to dump credentials by using whitelisting<span id="scite-ref-49226f502c38a4bd89296004a1c9a789-38-a" class="scite-citeref-number" data-reference="Beechey 2010"><a href="#scite-49226f502c38a4bd89296004a1c9a789">38</a></span> tools, like AppLocker,<span id="scite-ref-34da59ab7a40adec8a57dd53521c699e-39-a" class="scite-citeref-number" data-reference="Windows Commands JPCERT"><a href="#scite-34da59ab7a40adec8a57dd53521c699e">39</a></span><span id="scite-ref-7abde4164335b68f118c6476873ad933-40-a" class="scite-citeref-number" data-reference="NSA MS AppLocker"><a href="#scite-7abde4164335b68f118c6476873ad933">40</a></span> or Software Restriction Policies<span id="scite-ref-9e2a9d6c65e284c53af1d2456c4d25da-41-a" class="scite-citeref-number" data-reference="Corio 2008"><a href="#scite-9e2a9d6c65e284c53af1d2456c4d25da">41</a></span> where appropriate.<span id="scite-ref-f98899d7dc94d2fb51020ff4b9120a9c-42-a" class="scite-citeref-number" data-reference="TechNet Applocker vs SRP"><a href="#scite-f98899d7dc94d2fb51020ff4b9120a9c">42</a></span>
+</p><p>With Windows 10, Microsoft implemented new protections called Credential Guard to protect the LSA secrets that can be used to obtain credentials through forms of credential dumping. It is not configured by default and has hardware and firmware system requirements.<span id="scite-ref-6244ed3130c1ea20f3629efdeec5cb06-43-a" class="scite-citeref-number" data-reference="TechNet Credential Guard"><a href="#scite-6244ed3130c1ea20f3629efdeec5cb06">43</a></span> It also does not protect against all forms of credential dumping.<span id="scite-ref-26bdfb5f997c753432359e6846a1a31a-44-a" class="scite-citeref-number" data-reference="GitHub SHB Credential Guard"><a href="#scite-26bdfb5f997c753432359e6846a1a31a">44</a></span>
+</p>
+<h2><span class="mw-headline" id="Detection">Detection</span></h2>
+<p>Common credential dumpers such as <a href="/wiki/Software/S0002" title="Software/S0002">Mimikatz</a> access the LSA Subsystem Service (LSASS) process by opening the process, locating the LSA secrets key, and decrypting the sections in memory where credential details are stored. Credential dumpers may also use methods for reflective <a href="/wiki/Technique/T1055" title="Technique/T1055">DLL Injection</a> to reduce potential indicators of malicious activity.
+</p><p>NTLM hash dumpers open the Security Accounts Manager (SAM) on the local file system (%SystemRoot%/system32/config/SAM) or create a dump of the Registry SAM key to access stored account password hashes. Some hash dumpers will open the local file system as a device and parse to the SAM table to avoid file access defenses. Others will make an in-memory copy of the SAM table before reading hashes. Detection of compromised <a href="/wiki/Technique/T1078" title="Technique/T1078">Valid Accounts</a> in-use by adversaries may help as well. 
+</p><p>On Windows 8.1 and Windows Server 2012 R2, monitor Windows Logs for LSASS.exe creation to verify that LSASS started as a protected process.
+</p><p>Monitor processes and command-line arguments for program execution that may be indicative of credential dumping. Remote access tools may contain built-in features or incorporate existing tools like <a href="/wiki/Software/S0002" title="Software/S0002">Mimikatz</a>. <a href="/wiki/Technique/T1086" title="Technique/T1086">PowerShell</a> scripts also exist that contain credential dumping functionality, such as PowerSploit's Invoke-Mimikatz module,<span id="scite-ref-84887288ab84f6c9ce88f535ea1b121f-45-a" class="scite-citeref-number" data-reference="Powersploit"><a href="#scite-84887288ab84f6c9ce88f535ea1b121f">45</a></span> which may require additional logging features to be configured in the operating system to collect necessary information for analysis.
+</p>
+<div class="scite-content"><h2 id="References">References</h2>
+<div class="scite-referencelist" dir="ltr"><div class="scite-referencelist-columns-fixed" style="width:50%;" dir="ltr"><ol start=1><li><span id="scite-9cab363c426b80c420cc0b022ff40fec" class="scite-referencelinks"><a href="#scite-ref-9cab363c426b80c420cc0b022ff40fec-1-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-9cab363c426b80c420cc0b022ff40fec" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F140-23-5FSCITE9cab363c426b80c420cc0b022ff40fec" title="Special:Browse/:Reference-2F140-23-5FSCITE9cab363c426b80c420cc0b022ff40fec">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://github.com/gentilkiwi/mimikatz/wiki/module-~-sekurlsa">Delpy, B. (2014, September 14). Mimikatz module ~ sekurlsa. Retrieved January 10, 2016.</a></span></span></li><li><span id="scite-254cdc45583d463b3ba4c69880e905ae" class="scite-referencelinks"><a href="#scite-ref-254cdc45583d463b3ba4c69880e905ae-2-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-254cdc45583d463b3ba4c69880e905ae" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F513-23-5FSCITE254cdc45583d463b3ba4c69880e905ae" title="Special:Browse/:Reference-2F513-23-5FSCITE254cdc45583d463b3ba4c69880e905ae">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://adsecurity.org/?p=1729">Metcalf, S. (2015, September 25). Mimikatz DCSync Usage, Exploitation, and Detection. Retrieved August 7, 2017.</a></span></span></li><li><span id="scite-0c005d8c3134d5c5ab70a3bfe127d4a9" class="scite-referencelinks"><a href="#scite-ref-0c005d8c3134d5c5ab70a3bfe127d4a9-3-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-0c005d8c3134d5c5ab70a3bfe127d4a9" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F511-23-5FSCITE0c005d8c3134d5c5ab70a3bfe127d4a9" title="Special:Browse/:Reference-2F511-23-5FSCITE0c005d8c3134d5c5ab70a3bfe127d4a9">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.harmj0y.net/blog/redteaming/mimikatz-and-dcsync-and-extrasids-oh-my/">Schroeder, W. (2015, September 22). Mimikatz and DCSync and ExtraSids, Oh My. Retrieved August 7, 2017.</a></span></span></li><li><span id="scite-37e18b924baf59c9bb150bcdb8a27760" class="scite-referencelinks"><a href="#scite-ref-37e18b924baf59c9bb150bcdb8a27760-4-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-37e18b924baf59c9bb150bcdb8a27760" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F512-23-5FSCITE37e18b924baf59c9bb150bcdb8a27760" title="Special:Browse/:Reference-2F512-23-5FSCITE37e18b924baf59c9bb150bcdb8a27760">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://github.com/gentilkiwi/mimikatz/wiki/module-~-lsadump">Deply, B., Le Toux, V. (2016, June 5). module ~ lsadump. Retrieved August 7, 2017.</a></span></span></li><li><span id="scite-3445f4a084afab5d99bcdb7b0ac91a6f" class="scite-referencelinks"><a href="#scite-ref-3445f4a084afab5d99bcdb7b0ac91a6f-5-a" class="scite-backlinks" data-citeref-format="number">a</a>&nbsp;<a href="#scite-ref-3445f4a084afab5d99bcdb7b0ac91a6f-5-b" class="scite-backlinks" data-citeref-format="number">b</a>&nbsp;<a href="#scite-ref-3445f4a084afab5d99bcdb7b0ac91a6f-5-c" class="scite-backlinks" data-citeref-format="number">c</a>&nbsp;<a href="#scite-ref-3445f4a084afab5d99bcdb7b0ac91a6f-5-d" class="scite-backlinks" data-citeref-format="number">d</a></span>&nbsp;<span id="scite-3445f4a084afab5d99bcdb7b0ac91a6f" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F80-23-5FSCITE3445f4a084afab5d99bcdb7b0ac91a6f" title="Special:Browse/:Reference-2F80-23-5FSCITE3445f4a084afab5d99bcdb7b0ac91a6f">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.fireeye.com/content/dam/fireeye-www/services/pdfs/mandiant-apt1-report.pdf">Mandiant. (n.d.). APT1 Exposing One of China’s Cyber Espionage Units. Retrieved July 18, 2016.</a></span></span></li><li><span id="scite-c6944c9f1c690dc6436265586224221f" class="scite-referencelinks"><a href="#scite-ref-c6944c9f1c690dc6436265586224221f-6-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-c6944c9f1c690dc6436265586224221f" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F344-23-5FSCITEc6944c9f1c690dc6436265586224221f" title="Special:Browse/:Reference-2F344-23-5FSCITEc6944c9f1c690dc6436265586224221f">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.welivesecurity.com/wp-content/uploads/2016/10/eset-sednit-part-2.pdf">ESET. (2016, October). En Route with Sednit - Part 2: Observing the Comings and Goings. Retrieved November 21, 2016.</a></span></span></li><li><span id="scite-646ac16795e474906e8d77818d2879d9" class="scite-referencelinks"><a href="#scite-ref-646ac16795e474906e8d77818d2879d9-7-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-646ac16795e474906e8d77818d2879d9" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F336-23-5FSCITE646ac16795e474906e8d77818d2879d9" title="Special:Browse/:Reference-2F336-23-5FSCITE646ac16795e474906e8d77818d2879d9">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.symantec.com/connect/blogs/buckeye-cyberespionage-group-shifts-gaze-us-hong-kong">Symantec Security Response. (2016, September 6). Buckeye cyberespionage group shifts gaze from US to Hong Kong. Retrieved September 26, 2016.</a></span></span></li><li><span id="scite-2c5d94dd609855f43c21c46744afec3d" class="scite-referencelinks"><a href="#scite-ref-2c5d94dd609855f43c21c46744afec3d-8-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-2c5d94dd609855f43c21c46744afec3d" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F94-23-5FSCITE2c5d94dd609855f43c21c46744afec3d" title="Special:Browse/:Reference-2F94-23-5FSCITE2c5d94dd609855f43c21c46744afec3d">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.novetta.com/wp-content/uploads/2014/11/Executive_Summary-Final_1.pdf">Novetta. (n.d.). Operation SMN: Axiom Threat Actor Group Report. Retrieved November 12, 2014.</a></span></span></li><li><span id="scite-9527aa2f12c070963c63670a7afdf1b0" class="scite-referencelinks"><a href="#scite-ref-9527aa2f12c070963c63670a7afdf1b0-9-a" class="scite-backlinks" data-citeref-format="number">a</a>&nbsp;<a href="#scite-ref-9527aa2f12c070963c63670a7afdf1b0-9-b" class="scite-backlinks" data-citeref-format="number">b</a></span>&nbsp;<span id="scite-9527aa2f12c070963c63670a7afdf1b0" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F82-23-5FSCITE9527aa2f12c070963c63670a7afdf1b0" title="Special:Browse/:Reference-2F82-23-5FSCITE9527aa2f12c070963c63670a7afdf1b0">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf">Cylance. (2014, December). Operation Cleaver. Retrieved December 4, 2014.</a></span></span></li><li><span id="scite-07c84dc23d751e92b17ba14ed8811db8" class="scite-referencelinks"><a href="#scite-ref-07c84dc23d751e92b17ba14ed8811db8-10-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-07c84dc23d751e92b17ba14ed8811db8" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F254-23-5FSCITE07c84dc23d751e92b17ba14ed8811db8" title="Special:Browse/:Reference-2F254-23-5FSCITE07c84dc23d751e92b17ba14ed8811db8">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www2.fireeye.com/rs/848-DID-242/images/rpt-fin6.pdf">FireEye Threat Intelligence. (2016, April). Follow the Money: Dissecting the Operations of the Cyber Crime Group FIN6. Retrieved June 1, 2016.</a></span></span></li><li><span id="scite-c725b326316e848c4f9b2938d0ec5b27" class="scite-referencelinks"><a href="#scite-ref-c725b326316e848c4f9b2938d0ec5b27-11-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-c725b326316e848c4f9b2938d0ec5b27" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F81-23-5FSCITEc725b326316e848c4f9b2938d0ec5b27" title="Special:Browse/:Reference-2F81-23-5FSCITEc725b326316e848c4f9b2938d0ec5b27">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-operation-ke3chang.pdf">Villeneuve, N., Bennett, J. T., Moran, N., Haq, T., Scott, M., &amp; Geers, K. (2014). OPERATION “KE3CHANG�?: Targeted Attacks Against Ministries of Foreign Affairs. Retrieved November 12, 2014.</a></span></span></li><li><span id="scite-29d43b1d24c0492e24102fd9fa64563b" class="scite-referencelinks"><a href="#scite-ref-29d43b1d24c0492e24102fd9fa64563b-12-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-29d43b1d24c0492e24102fd9fa64563b" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F137-23-5FSCITE29d43b1d24c0492e24102fd9fa64563b" title="Special:Browse/:Reference-2F137-23-5FSCITE29d43b1d24c0492e24102fd9fa64563b">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.clearskysec.com/wp-content/uploads/2016/01/Operation%20DustySky_TLP_WHITE.pdf">ClearSky. (2016, January 7). Operation DustySky. Retrieved January 8, 2016.</a></span></span></li><li><span id="scite-2af1a214ecb9c2658d4b51aaece3468e" class="scite-referencelinks"><a href="#scite-ref-2af1a214ecb9c2658d4b51aaece3468e-13-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-2af1a214ecb9c2658d4b51aaece3468e" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F318-23-5FSCITE2af1a214ecb9c2658d4b51aaece3468e" title="Special:Browse/:Reference-2F318-23-5FSCITE2af1a214ecb9c2658d4b51aaece3468e">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://s3-us-west-2.amazonaws.com/cymmetria-blog/public/Unveiling_Patchwork.pdf">Cymmetria. (2016). Unveiling Patchwork - The Copy-Paste APT. Retrieved August 3, 2016.</a></span></span></li><li><span id="scite-1f1991f120c32969c526a1c2d182b579" class="scite-referencelinks"><a href="#scite-ref-1f1991f120c32969c526a1c2d182b579-14-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-1f1991f120c32969c526a1c2d182b579" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F186-23-5FSCITE1f1991f120c32969c526a1c2d182b579" title="Special:Browse/:Reference-2F186-23-5FSCITE1f1991f120c32969c526a1c2d182b579">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://securelist.com/blog/research/73673/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/">Kaspersky Lab's Global Research and Analysis Team. (2016, February 9). Poseidon Group: a Targeted Attack Boutique specializing in global cyber-espionage. Retrieved March 16, 2016.</a></span></span></li><li><span id="scite-19d2d359a2615e8dbd5041564ea3cce3" class="scite-referencelinks"><a href="#scite-ref-19d2d359a2615e8dbd5041564ea3cce3-15-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-19d2d359a2615e8dbd5041564ea3cce3" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F277-23-5FSCITE19d2d359a2615e8dbd5041564ea3cce3" title="Special:Browse/:Reference-2F277-23-5FSCITE19d2d359a2615e8dbd5041564ea3cce3">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://citizenlab.org/2016/05/stealth-falcon/">Marczak, B. and Scott-Railton, J.. (2016, May 29). Keep Calm and (Don’t) Enable Macros: A New Threat Actor Targets UAE Dissidents. Retrieved June 8, 2016.</a></span></span></li><li><span id="scite-c4a9f1758a7f06d97d9e416ace8c5611" class="scite-referencelinks"><a href="#scite-ref-c4a9f1758a7f06d97d9e416ace8c5611-16-a" class="scite-backlinks" data-citeref-format="number">a</a>&nbsp;<a href="#scite-ref-c4a9f1758a7f06d97d9e416ace8c5611-16-b" class="scite-backlinks" data-citeref-format="number">b</a></span>&nbsp;<span id="scite-c4a9f1758a7f06d97d9e416ace8c5611" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F326-23-5FSCITEc4a9f1758a7f06d97d9e416ace8c5611" title="Special:Browse/:Reference-2F326-23-5FSCITEc4a9f1758a7f06d97d9e416ace8c5611">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://securelist.com/files/2016/07/The-ProjectSauron-APT_research_KL.pdf">Kaspersky Lab's Global Research &amp; Analysis Team. (2016, August 9). The ProjectSauron APT. Retrieved August 17, 2016.</a></span></span></li><li><span id="scite-4a7fb81df624aa5e56cd7f23b75206f4" class="scite-referencelinks"><a href="#scite-ref-4a7fb81df624aa5e56cd7f23b75206f4-17-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-4a7fb81df624aa5e56cd7f23b75206f4" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F314-23-5FSCITE4a7fb81df624aa5e56cd7f23b75206f4" title="Special:Browse/:Reference-2F314-23-5FSCITE4a7fb81df624aa5e56cd7f23b75206f4">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.symantec.com/connect/blogs/indian-organizations-targeted-suckfly-attacks">DiMaggio, J.. (2016, May 17). Indian organizations targeted in Suckfly attacks. Retrieved August 3, 2016.</a></span></span></li><li><span id="scite-a7b8a9ff0c57e47f64f3e43e019913a0" class="scite-referencelinks"><a href="#scite-ref-a7b8a9ff0c57e47f64f3e43e019913a0-18-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-a7b8a9ff0c57e47f64f3e43e019913a0" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F159-23-5FSCITEa7b8a9ff0c57e47f64f3e43e019913a0" title="Special:Browse/:Reference-2F159-23-5FSCITEa7b8a9ff0c57e47f64f3e43e019913a0">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.secureworks.com/cyber-threat-intelligence/threats/threat-group-3390-targets-organizations-for-cyberespionage/">Dell SecureWorks Counter Threat Unit Threat Intelligence. (2015, August 5). Threat Group-3390 Targets Organizations for Cyberespionage. Retrieved January 25, 2016.</a></span></span></li><li><span id="scite-08a757fa132a7c05c8704b389a4a9cef" class="scite-referencelinks"><a href="#scite-ref-08a757fa132a7c05c8704b389a4a9cef-19-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-08a757fa132a7c05c8704b389a4a9cef" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F503-23-5FSCITE08a757fa132a7c05c8704b389a4a9cef" title="Special:Browse/:Reference-2F503-23-5FSCITE08a757fa132a7c05c8704b389a4a9cef">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.secureworks.com/research/bronze-union">Counter Threat Unit Research Team. (2017, June 27). BRONZE UNION Cyberespionage Persists Despite Disclosures. Retrieved July 13, 2017.</a></span></span></li><li><span id="scite-4b90d46eb6116d75a9b866faccbb9461" class="scite-referencelinks"><a href="#scite-ref-4b90d46eb6116d75a9b866faccbb9461-20-a" class="scite-backlinks" data-citeref-format="number">a</a>&nbsp;<a href="#scite-ref-4b90d46eb6116d75a9b866faccbb9461-20-b" class="scite-backlinks" data-citeref-format="number">b</a></span>&nbsp;<span id="scite-4b90d46eb6116d75a9b866faccbb9461" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F410-23-5FSCITE4b90d46eb6116d75a9b866faccbb9461" title="Special:Browse/:Reference-2F410-23-5FSCITE4b90d46eb6116d75a9b866faccbb9461">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf">PwC and BAE Systems. (2017, April). Operation Cloud Hopper: Technical Annex. Retrieved April 13, 2017.</a></span></span></li><li><span id="scite-b4426e980a1464dd5c8fdb7776bb677f" class="scite-referencelinks"><a href="#scite-ref-b4426e980a1464dd5c8fdb7776bb677f-21-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-b4426e980a1464dd5c8fdb7776bb677f" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F449-23-5FSCITEb4426e980a1464dd5c8fdb7776bb677f" title="Special:Browse/:Reference-2F449-23-5FSCITEb4426e980a1464dd5c8fdb7776bb677f">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://github.com/Twi1ight/AD-Pentest-Script/blob/master/wmiexec.vbs">Twi1ight. (2015, July 11). AD-Pentest-Script - wmiexec.vbs. Retrieved June 29, 2017.</a></span></span></li><li><span id="scite-c95f42d9901a22935c5739cddc12d159" class="scite-referencelinks"><a href="#scite-ref-c95f42d9901a22935c5739cddc12d159-22-a" class="scite-backlinks" data-citeref-format="number">a</a>&nbsp;<a href="#scite-ref-c95f42d9901a22935c5739cddc12d159-22-b" class="scite-backlinks" data-citeref-format="number">b</a></span>&nbsp;<span id="scite-c95f42d9901a22935c5739cddc12d159" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F215-23-5FSCITEc95f42d9901a22935c5739cddc12d159" title="Special:Browse/:Reference-2F215-23-5FSCITEc95f42d9901a22935c5739cddc12d159">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/Dragonfly_Threat_Against_Western_Energy_Suppliers.pdf">Symantec Security Response. (2014, July 7). Dragonfly: Cyberespionage Attacks Against Energy Suppliers. Retrieved April 8, 2016.</a></span></span></li><li><span id="scite-a2b5a779efe1a20438d80ed84baddfcb" class="scite-referencelinks"><a href="#scite-ref-a2b5a779efe1a20438d80ed84baddfcb-23-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-a2b5a779efe1a20438d80ed84baddfcb" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F431-23-5FSCITEa2b5a779efe1a20438d80ed84baddfcb" title="Special:Browse/:Reference-2F431-23-5FSCITEa2b5a779efe1a20438d80ed84baddfcb">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://cobaltstrike.com/downloads/csmanual38.pdf">Strategic Cyber LLC. (2017, March 14). Cobalt Strike Manual. Retrieved May 24, 2017.</a></span></span></li></ol></div> <!-- end column --><div class="scite-referencelist-columns-fixed" style="width:50%;" dir="ltr"><ol start=24><li><span id="scite-40eb3a30f4ec653c3978cd00d91d18fb" class="scite-referencelinks"><a href="#scite-ref-40eb3a30f4ec653c3978cd00d91d18fb-24-a" class="scite-backlinks" data-citeref-format="number">a</a>&nbsp;<a href="#scite-ref-40eb3a30f4ec653c3978cd00d91d18fb-24-b" class="scite-backlinks" data-citeref-format="number">b</a>&nbsp;<a href="#scite-ref-40eb3a30f4ec653c3978cd00d91d18fb-24-c" class="scite-backlinks" data-citeref-format="number">c</a></span>&nbsp;<span id="scite-40eb3a30f4ec653c3978cd00d91d18fb" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F113-23-5FSCITE40eb3a30f4ec653c3978cd00d91d18fb" title="Special:Browse/:Reference-2F113-23-5FSCITE40eb3a30f4ec653c3978cd00d91d18fb">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.f-secure.com/documents/996508/1030745/dukes_whitepaper.pdf">F-Secure Labs. (2015, September 17). The Dukes: 7 years of Russian cyberespionage. Retrieved December 10, 2015.</a></span></span></li><li><span id="scite-69bd59daab8cc1263bfe82a6050097dc" class="scite-referencelinks"><a href="#scite-ref-69bd59daab8cc1263bfe82a6050097dc-25-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-69bd59daab8cc1263bfe82a6050097dc" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F112-23-5FSCITE69bd59daab8cc1263bfe82a6050097dc" title="Special:Browse/:Reference-2F112-23-5FSCITE69bd59daab8cc1263bfe82a6050097dc">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.f-secure.com/documents/996508/1030745/CozyDuke">F-Secure Labs. (2015, April 22). CozyDuke: Malware Analysis. Retrieved December 10, 2015.</a></span></span></li><li><span id="scite-622257b18d53a182dbd97e7a234aefde" class="scite-referencelinks"><a href="#scite-ref-622257b18d53a182dbd97e7a234aefde-26-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-622257b18d53a182dbd97e7a234aefde" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F279-23-5FSCITE622257b18d53a182dbd97e7a234aefde" title="Special:Browse/:Reference-2F279-23-5FSCITE622257b18d53a182dbd97e7a234aefde">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.proofpoint.com/sites/default/files/proofpoint-operation-transparent-tribe-threat-insight-en.pdf">Huss, D.. (2016, March 1). Operation Transparent Tribe. Retrieved June 8, 2016.</a></span></span></li><li><span id="scite-45ad89c84d56e47f0b19a372dad9e2f9" class="scite-referencelinks"><a href="#scite-ref-45ad89c84d56e47f0b19a372dad9e2f9-27-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-45ad89c84d56e47f0b19a372dad9e2f9" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F338-23-5FSCITE45ad89c84d56e47f0b19a372dad9e2f9" title="Special:Browse/:Reference-2F338-23-5FSCITE45ad89c84d56e47f0b19a372dad9e2f9">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://blogs.cisco.com/security/h1n1-technical-analysis-reveals-new-capabilities-part-2">Reynolds, J.. (2016, September 14). H1N1: Technical analysis reveals new capabilities – part 2. Retrieved September 26, 2016.</a></span></span></li><li><span id="scite-a0fad4534237dd8fed442c144c80f621" class="scite-referencelinks"><a href="#scite-ref-a0fad4534237dd8fed442c144c80f621-28-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-a0fad4534237dd8fed442c144c80f621" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F103-23-5FSCITEa0fad4534237dd8fed442c144c80f621" title="Special:Browse/:Reference-2F103-23-5FSCITEa0fad4534237dd8fed442c144c80f621">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://github.com/gentilkiwi/mimikatz">Deply, B. (n.d.). Mimikatz. Retrieved September 29, 2015.</a></span></span></li><li><span id="scite-86a039a64807e1f9a86df55a2e3b0944" class="scite-referencelinks"><a href="#scite-ref-86a039a64807e1f9a86df55a2e3b0944-29-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-86a039a64807e1f9a86df55a2e3b0944" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F172-23-5FSCITE86a039a64807e1f9a86df55a2e3b0944" title="Special:Browse/:Reference-2F172-23-5FSCITE86a039a64807e1f9a86df55a2e3b0944">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.symantec.com/security_response/writeup.jsp?docid=2015-020623-0740-99&amp;tabid=2">Stama, D.. (2015, February 6). Backdoor.Mivast. Retrieved February 15, 2016.</a></span></span></li><li><span id="scite-804ef0a371ff0702073f356971741ebf" class="scite-referencelinks"><a href="#scite-ref-804ef0a371ff0702073f356971741ebf-30-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-804ef0a371ff0702073f356971741ebf" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F56-23-5FSCITE804ef0a371ff0702073f356971741ebf" title="Special:Browse/:Reference-2F56-23-5FSCITE804ef0a371ff0702073f356971741ebf">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/rpt-apt28.pdf">FireEye. (2015). APT28: A WINDOW INTO RUSSIA’S CYBER ESPIONAGE OPERATIONS?. Retrieved August 19, 2015.</a></span></span></li><li><span id="scite-f49c77a9eb49f300a7ed692bd3eb6e58" class="scite-referencelinks"><a href="#scite-ref-f49c77a9eb49f300a7ed692bd3eb6e58-31-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-f49c77a9eb49f300a7ed692bd3eb6e58" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F252-23-5FSCITEf49c77a9eb49f300a7ed692bd3eb6e58" title="Special:Browse/:Reference-2F252-23-5FSCITEf49c77a9eb49f300a7ed692bd3eb6e58">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.welivesecurity.com/wp-content/uploads/2016/05/Operation-Groundbait.pdf">Cherepanov, A.. (2016, May 17). Operation Groundbait: Analysis of a surveillance toolkit. Retrieved May 18, 2016.</a></span></span></li><li><span id="scite-e62547e60699f5ec56ef3daa94a6b126" class="scite-referencelinks"><a href="#scite-ref-e62547e60699f5ec56ef3daa94a6b126-32-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-e62547e60699f5ec56ef3daa94a6b126" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F328-23-5FSCITEe62547e60699f5ec56ef3daa94a6b126" title="Special:Browse/:Reference-2F328-23-5FSCITEe62547e60699f5ec56ef3daa94a6b126">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://securelist.com/files/2016/07/The-ProjectSauron-APT_Technical_Analysis_KL.pdf">Kaspersky Lab's Global Research &amp; Analysis Team. (2016, August 9). The ProjectSauron APT. Technical Analysis. Retrieved August 17, 2016.</a></span></span></li><li><span id="scite-91e1bf481418fa7ac1af3de94eb1be46" class="scite-referencelinks"><a href="#scite-ref-91e1bf481418fa7ac1af3de94eb1be46-33-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-91e1bf481418fa7ac1af3de94eb1be46" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F333-23-5FSCITE91e1bf481418fa7ac1af3de94eb1be46" title="Special:Browse/:Reference-2F333-23-5FSCITE91e1bf481418fa7ac1af3de94eb1be46">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.forcepoint.com/sites/default/files/resources/files/forcepoint-security-labs-monsoon-analysis-report.pdf">Settle, A., et al. (2016, August 8). MONSOON - Analysis Of An APT Campaign. Retrieved September 22, 2016.</a></span></span></li><li><span id="scite-c48c2a15dfe1d914c2c675edd958b94e" class="scite-referencelinks"><a href="#scite-ref-c48c2a15dfe1d914c2c675edd958b94e-34-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-c48c2a15dfe1d914c2c675edd958b94e" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F116-23-5FSCITEc48c2a15dfe1d914c2c675edd958b94e" title="Special:Browse/:Reference-2F116-23-5FSCITEc48c2a15dfe1d914c2c675edd958b94e">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.ampliasecurity.com/research/wcefaq.html">Amplia Security. (n.d.). Windows Credentials Editor (WCE) F.A.Q.. Retrieved December 17, 2015.</a></span></span></li><li><span id="scite-d0e61a780f21058063ce95079f16797a" class="scite-referencelinks"><a href="#scite-ref-d0e61a780f21058063ce95079f16797a-35-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-d0e61a780f21058063ce95079f16797a" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F100-23-5FSCITEd0e61a780f21058063ce95079f16797a" title="Special:Browse/:Reference-2F100-23-5FSCITEd0e61a780f21058063ce95079f16797a">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.truesec.com/Tools/Tool/gsecdump_v2.0b5">TrueSec. (n.d.). gsecdump v2.0b5. Retrieved September 29, 2015.</a></span></span></li><li><span id="scite-07938a82e11dcc3070ad0620dc1cbabd" class="scite-referencelinks"><a href="#scite-ref-07938a82e11dcc3070ad0620dc1cbabd-36-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-07938a82e11dcc3070ad0620dc1cbabd" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F289-23-5FSCITE07938a82e11dcc3070ad0620dc1cbabd" title="Special:Browse/:Reference-2F289-23-5FSCITE07938a82e11dcc3070ad0620dc1cbabd">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Pwdump">Wikipedia. (1985, June 22). pwdump. Retrieved June 22, 2016.</a></span></span></li><li><span id="scite-90040a6b65b80f4d794e3aa762c0bcec" class="scite-referencelinks"><a href="#scite-ref-90040a6b65b80f4d794e3aa762c0bcec-37-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-90040a6b65b80f4d794e3aa762c0bcec" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F79-23-5FSCITE90040a6b65b80f4d794e3aa762c0bcec" title="Special:Browse/:Reference-2F79-23-5FSCITE90040a6b65b80f4d794e3aa762c0bcec">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://technet.microsoft.com/en-us/library/dn408187.aspx">Microsoft. (2013, July 31). Configuring Additional LSA Protection. Retrieved February 13, 2015.</a></span></span></li><li><span id="scite-49226f502c38a4bd89296004a1c9a789" class="scite-referencelinks"><a href="#scite-ref-49226f502c38a4bd89296004a1c9a789-38-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-49226f502c38a4bd89296004a1c9a789" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F91-23-5FSCITE49226f502c38a4bd89296004a1c9a789" title="Special:Browse/:Reference-2F91-23-5FSCITE49226f502c38a4bd89296004a1c9a789">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://www.sans.org/reading-room/whitepapers/application/application-whitelisting-panacea-propaganda-33599">Beechey, J. (2010, December). Application Whitelisting: Panacea or Propaganda?. Retrieved November 18, 2014.</a></span></span></li><li><span id="scite-34da59ab7a40adec8a57dd53521c699e" class="scite-referencelinks"><a href="#scite-ref-34da59ab7a40adec8a57dd53521c699e-39-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-34da59ab7a40adec8a57dd53521c699e" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F168-23-5FSCITE34da59ab7a40adec8a57dd53521c699e" title="Special:Browse/:Reference-2F168-23-5FSCITE34da59ab7a40adec8a57dd53521c699e">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://blog.jpcert.or.jp/2016/01/windows-commands-abused-by-attackers.html">Tomonaga, S. (2016, January 26). Windows Commands Abused by Attackers. Retrieved February 2, 2016.</a></span></span></li><li><span id="scite-7abde4164335b68f118c6476873ad933" class="scite-referencelinks"><a href="#scite-ref-7abde4164335b68f118c6476873ad933-40-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-7abde4164335b68f118c6476873ad933" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F205-23-5FSCITE7abde4164335b68f118c6476873ad933" title="Special:Browse/:Reference-2F205-23-5FSCITE7abde4164335b68f118c6476873ad933">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.iad.gov/iad/library/ia-guidance/tech-briefs/application-whitelisting-using-microsoft-applocker.cfm">NSA Information Assurance Directorate. (2014, August). Application Whitelisting Using Microsoft AppLocker. Retrieved March 31, 2016.</a></span></span></li><li><span id="scite-9e2a9d6c65e284c53af1d2456c4d25da" class="scite-referencelinks"><a href="#scite-ref-9e2a9d6c65e284c53af1d2456c4d25da-41-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-9e2a9d6c65e284c53af1d2456c4d25da" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F92-23-5FSCITE9e2a9d6c65e284c53af1d2456c4d25da" title="Special:Browse/:Reference-2F92-23-5FSCITE9e2a9d6c65e284c53af1d2456c4d25da">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="http://technet.microsoft.com/en-us/magazine/2008.06.srp.aspx">Corio, C., &amp; Sayana, D. P. (2008, June). Application Lockdown with Software Restriction Policies. Retrieved November 18, 2014.</a></span></span></li><li><span id="scite-f98899d7dc94d2fb51020ff4b9120a9c" class="scite-referencelinks"><a href="#scite-ref-f98899d7dc94d2fb51020ff4b9120a9c-42-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-f98899d7dc94d2fb51020ff4b9120a9c" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F211-23-5FSCITEf98899d7dc94d2fb51020ff4b9120a9c" title="Special:Browse/:Reference-2F211-23-5FSCITEf98899d7dc94d2fb51020ff4b9120a9c">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://technet.microsoft.com/en-us/library/ee791851.aspx">Microsoft. (2012, June 27). Using Software Restriction Policies and AppLocker Policies. Retrieved April 7, 2016.</a></span></span></li><li><span id="scite-6244ed3130c1ea20f3629efdeec5cb06" class="scite-referencelinks"><a href="#scite-ref-6244ed3130c1ea20f3629efdeec5cb06-43-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-6244ed3130c1ea20f3629efdeec5cb06" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F269-23-5FSCITE6244ed3130c1ea20f3629efdeec5cb06" title="Special:Browse/:Reference-2F269-23-5FSCITE6244ed3130c1ea20f3629efdeec5cb06">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://technet.microsoft.com/en-us/itpro/windows/keep-secure/credential-guard">Lich, B. (2016, May 31). Protect derived domain credentials with Credential Guard. Retrieved June 1, 2016.</a></span></span></li><li><span id="scite-26bdfb5f997c753432359e6846a1a31a" class="scite-referencelinks"><a href="#scite-ref-26bdfb5f997c753432359e6846a1a31a-44-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-26bdfb5f997c753432359e6846a1a31a" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F420-23-5FSCITE26bdfb5f997c753432359e6846a1a31a" title="Special:Browse/:Reference-2F420-23-5FSCITE26bdfb5f997c753432359e6846a1a31a">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://github.com/iadgov/Secure-Host-Baseline/tree/master/Credential%20Guard">NSA IAD. (2017, April 20). Secure Host Baseline - Credential Guard. Retrieved April 25, 2017.</a></span></span></li><li><span id="scite-84887288ab84f6c9ce88f535ea1b121f" class="scite-referencelinks"><a href="#scite-ref-84887288ab84f6c9ce88f535ea1b121f-45-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-84887288ab84f6c9ce88f535ea1b121f" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F13-23-5FSCITE84887288ab84f6c9ce88f535ea1b121f" title="Special:Browse/:Reference-2F13-23-5FSCITE84887288ab84f6c9ce88f535ea1b121f">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://github.com/mattifestation/PowerSploit">PowerSploit. (n.d.).  Retrieved December 4, 2014.</a></span></span></li></ol></div> <!-- end column -->
+<br style="clear: both;"/></div>
+</div>
+<p>&#32;
+</p>
+<table class="navbox" cellspacing="0" style=";">
+
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible uncollapsed" style="width:100%;background:transparent;color:inherit;;">
+
+<tr>
+<th style=";" colspan="2" class="navbox-title"> <div style="float:left; width:6em;text-align:left;"> <span class="noprint plainlinks navbar" style=""><span style="white-space:nowrap;word-spacing:-.12em;"><a href="/wiki/Template:Adversary_Techniques" title="Template:Adversary Techniques"><span style=";;border:none;" title="View this template">v</span></a><span style=";;border:none;">&#32;<b>&#183;</b>&#32;</span><a href="/w/index.php?title=Template_talk:Adversary_Techniques&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Adversary Techniques (page does not exist)"><span style=";;border:none;" title="Discuss this template">d</span></a><span style=";;border:none;">&#32;<b>&#183;</b>&#32;</span><a rel="nofollow" class="external text" href="https://attack.mitre.org/w/index.php?title=Template:Adversary_Techniques&amp;action=edit"><span style=";;border:none;" title="Edit this template">e</span></a></span></span> </div> <span style="font-size:110%;"> <a href="/wiki/Template:Adversary_Techniques" title="Template:Adversary Techniques">Adversary Techniques</a></span>
+</th></tr>
+<tr style="height:2px;">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Persistence" title="Persistence">Persistence</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-odd"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1156" title="Technique/T1156">.bash_profile and .bashrc</a></li>
+	<li><a href="/wiki/Technique/T1015" title="Technique/T1015">Accessibility Features</a></li>
+	<li><a href="/wiki/Technique/T1103" title="Technique/T1103">AppInit DLLs</a></li>
+	<li><a href="/wiki/Technique/T1138" title="Technique/T1138">Application Shimming</a></li>
+	<li><a href="/wiki/Technique/T1131" title="Technique/T1131">Authentication Package</a></li>
+	<li><a href="/wiki/Technique/T1067" title="Technique/T1067">Bootkit</a></li>
+	<li><a href="/wiki/Technique/T1042" title="Technique/T1042">Change Default File Association</a></li>
+	<li><a href="/wiki/Technique/T1109" title="Technique/T1109">Component Firmware</a></li>
+	<li><a href="/wiki/Technique/T1122" title="Technique/T1122">Component Object Model Hijacking</a></li>
+	<li><a href="/wiki/Technique/T1168" title="Technique/T1168">Cron Job</a></li>
+	<li><a href="/wiki/Technique/T1038" title="Technique/T1038">DLL Search Order Hijacking</a></li>
+	<li><a href="/wiki/Technique/T1157" title="Technique/T1157">Dylib Hijacking</a></li>
+	<li><a href="/wiki/Technique/T1133" title="Technique/T1133">External Remote Services</a></li>
+	<li><a href="/wiki/Technique/T1044" title="Technique/T1044">File System Permissions Weakness</a></li>
+	<li><a href="/wiki/Technique/T1158" title="Technique/T1158">Hidden Files and Directories</a></li>
+	<li><a href="/wiki/Technique/T1062" title="Technique/T1062">Hypervisor</a></li>
+	<li><a href="/wiki/Technique/T1161" title="Technique/T1161">LC_LOAD_DYLIB Addition</a></li>
+	<li><a href="/wiki/Technique/T1159" title="Technique/T1159">Launch Agent</a></li>
+	<li><a href="/wiki/Technique/T1160" title="Technique/T1160">Launch Daemon</a></li>
+	<li><a href="/wiki/Technique/T1152" title="Technique/T1152">Launchctl</a></li>
+	<li><a href="/wiki/Technique/T1013" title="Technique/T1013">Local Port Monitor</a></li>
+	<li><a href="/wiki/Technique/T1162" title="Technique/T1162">Login Item</a></li>
+	<li><a href="/wiki/Technique/T1037" title="Technique/T1037">Logon Scripts</a></li>
+	<li><a href="/wiki/Technique/T1031" title="Technique/T1031">Modify Existing Service</a></li>
+	<li><a href="/wiki/Technique/T1128" title="Technique/T1128">Netsh Helper DLL</a></li>
+	<li><a href="/wiki/Technique/T1050" title="Technique/T1050">New Service</a></li>
+	<li><a href="/wiki/Technique/T1137" title="Technique/T1137">Office Application Startup</a></li>
+	<li><a href="/wiki/Technique/T1034" title="Technique/T1034">Path Interception</a></li>
+	<li><a href="/wiki/Technique/T1150" title="Technique/T1150">Plist Modification</a></li>
+	<li><a href="/wiki/Technique/T1163" title="Technique/T1163">Rc.common</a></li>
+	<li><a href="/wiki/Technique/T1164" title="Technique/T1164">Re-opened Applications</a></li>
+	<li><a href="/wiki/Technique/T1108" title="Technique/T1108">Redundant Access</a></li>
+	<li><a href="/wiki/Technique/T1060" title="Technique/T1060">Registry Run Keys / Start Folder</a></li>
+	<li><a href="/wiki/Technique/T1053" title="Technique/T1053">Scheduled Task</a></li>
+	<li><a href="/wiki/Technique/T1101" title="Technique/T1101">Security Support Provider</a></li>
+	<li><a href="/wiki/Technique/T1058" title="Technique/T1058">Service Registry Permissions Weakness</a></li>
+	<li><a href="/wiki/Technique/T1023" title="Technique/T1023">Shortcut Modification</a></li>
+	<li><a href="/wiki/Technique/T1165" title="Technique/T1165">Startup Items</a></li>
+	<li><a href="/wiki/Technique/T1019" title="Technique/T1019">System Firmware</a></li>
+	<li><a href="/wiki/Technique/T1154" title="Technique/T1154">Trap</a></li>
+	<li><a href="/wiki/Technique/T1078" title="Technique/T1078">Valid Accounts</a></li>
+	<li><a href="/wiki/Technique/T1100" title="Technique/T1100">Web Shell</a></li>
+	<li><a href="/wiki/Technique/T1084" title="Technique/T1084">Windows Management Instrumentation Event Subscription</a></li>
+	<li><a href="/wiki/Technique/T1004" title="Technique/T1004">Winlogon Helper DLL</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr>
+<tr style="height:2px">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Privilege_Escalation" title="Privilege Escalation">Privilege Escalation</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-even"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1134" title="Technique/T1134">Access Token Manipulation</a></li>
+	<li><a href="/wiki/Technique/T1015" title="Technique/T1015">Accessibility Features</a></li>
+	<li><a href="/wiki/Technique/T1103" title="Technique/T1103">AppInit DLLs</a></li>
+	<li><a href="/wiki/Technique/T1138" title="Technique/T1138">Application Shimming</a></li>
+	<li><a href="/wiki/Technique/T1088" title="Technique/T1088">Bypass User Account Control</a></li>
+	<li><a href="/wiki/Technique/T1055" title="Technique/T1055">DLL Injection</a></li>
+	<li><a href="/wiki/Technique/T1038" title="Technique/T1038">DLL Search Order Hijacking</a></li>
+	<li><a href="/wiki/Technique/T1157" title="Technique/T1157">Dylib Hijacking</a></li>
+	<li><a href="/wiki/Technique/T1068" title="Technique/T1068">Exploitation of Vulnerability</a></li>
+	<li><a href="/wiki/Technique/T1044" title="Technique/T1044">File System Permissions Weakness</a></li>
+	<li><a href="/wiki/Technique/T1160" title="Technique/T1160">Launch Daemon</a></li>
+	<li><a href="/wiki/Technique/T1013" title="Technique/T1013">Local Port Monitor</a></li>
+	<li><a href="/wiki/Technique/T1050" title="Technique/T1050">New Service</a></li>
+	<li><a href="/wiki/Technique/T1034" title="Technique/T1034">Path Interception</a></li>
+	<li><a href="/wiki/Technique/T1150" title="Technique/T1150">Plist Modification</a></li>
+	<li><a href="/wiki/Technique/T1053" title="Technique/T1053">Scheduled Task</a></li>
+	<li><a href="/wiki/Technique/T1058" title="Technique/T1058">Service Registry Permissions Weakness</a></li>
+	<li><a href="/wiki/Technique/T1166" title="Technique/T1166">Setuid and Setgid</a></li>
+	<li><a href="/wiki/Technique/T1165" title="Technique/T1165">Startup Items</a></li>
+	<li><a href="/wiki/Technique/T1169" title="Technique/T1169">Sudo</a></li>
+	<li><a href="/wiki/Technique/T1078" title="Technique/T1078">Valid Accounts</a></li>
+	<li><a href="/wiki/Technique/T1100" title="Technique/T1100">Web Shell</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr>
+<tr style="height:2px">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Credential_Access" title="Credential Access">Credential Access</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-odd"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1098" title="Technique/T1098">Account Manipulation</a></li>
+	<li><a href="/wiki/Technique/T1139" title="Technique/T1139">Bash History</a></li>
+	<li><a href="/wiki/Technique/T1110" title="Technique/T1110">Brute Force</a></li>
+	<li><a href="/wiki/Technique/T1136" title="Technique/T1136">Create Account</a></li>
+	<li><strong class="selflink">Credential Dumping</strong></li>
+	<li><a href="/wiki/Technique/T1081" title="Technique/T1081">Credentials in Files</a></li>
+	<li><a href="/wiki/Technique/T1068" title="Technique/T1068">Exploitation of Vulnerability</a></li>
+	<li><a href="/wiki/Technique/T1056" title="Technique/T1056">Input Capture</a></li>
+	<li><a href="/wiki/Technique/T1141" title="Technique/T1141">Input Prompt</a></li>
+	<li><a href="/wiki/Technique/T1142" title="Technique/T1142">Keychain</a></li>
+	<li><a href="/wiki/Technique/T1040" title="Technique/T1040">Network Sniffing</a></li>
+	<li><a href="/wiki/Technique/T1145" title="Technique/T1145">Private Keys</a></li>
+	<li><a href="/wiki/Technique/T1167" title="Technique/T1167">Securityd Memory</a></li>
+	<li><a href="/wiki/Technique/T1111" title="Technique/T1111">Two-Factor Authentication Interception</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr>
+<tr style="height:2px">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Discovery" title="Discovery">Discovery</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-even"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1087" title="Technique/T1087">Account Discovery</a></li>
+	<li><a href="/wiki/Technique/T1010" title="Technique/T1010">Application Window Discovery</a></li>
+	<li><a href="/wiki/Technique/T1083" title="Technique/T1083">File and Directory Discovery</a></li>
+	<li><a href="/wiki/Technique/T1046" title="Technique/T1046">Network Service Scanning</a></li>
+	<li><a href="/wiki/Technique/T1135" title="Technique/T1135">Network Share Discovery</a></li>
+	<li><a href="/wiki/Technique/T1120" title="Technique/T1120">Peripheral Device Discovery</a></li>
+	<li><a href="/wiki/Technique/T1069" title="Technique/T1069">Permission Groups Discovery</a></li>
+	<li><a href="/wiki/Technique/T1057" title="Technique/T1057">Process Discovery</a></li>
+	<li><a href="/wiki/Technique/T1012" title="Technique/T1012">Query Registry</a></li>
+	<li><a href="/wiki/Technique/T1018" title="Technique/T1018">Remote System Discovery</a></li>
+	<li><a href="/wiki/Technique/T1063" title="Technique/T1063">Security Software Discovery</a></li>
+	<li><a href="/wiki/Technique/T1082" title="Technique/T1082">System Information Discovery</a></li>
+	<li><a href="/wiki/Technique/T1016" title="Technique/T1016">System Network Configuration Discovery</a></li>
+	<li><a href="/wiki/Technique/T1049" title="Technique/T1049">System Network Connections Discovery</a></li>
+	<li><a href="/wiki/Technique/T1033" title="Technique/T1033">System Owner/User Discovery</a></li>
+	<li><a href="/wiki/Technique/T1007" title="Technique/T1007">System Service Discovery</a></li>
+	<li><a href="/wiki/Technique/T1124" title="Technique/T1124">System Time Discovery</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr>
+<tr style="height:2px">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Defense_Evasion" title="Defense Evasion">Defense Evasion</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-odd"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1134" title="Technique/T1134">Access Token Manipulation</a></li>
+	<li><a href="/wiki/Technique/T1009" title="Technique/T1009">Binary Padding</a></li>
+	<li><a href="/wiki/Technique/T1088" title="Technique/T1088">Bypass User Account Control</a></li>
+	<li><a href="/wiki/Technique/T1146" title="Technique/T1146">Clear Command History</a></li>
+	<li><a href="/wiki/Technique/T1116" title="Technique/T1116">Code Signing</a></li>
+	<li><a href="/wiki/Technique/T1109" title="Technique/T1109">Component Firmware</a></li>
+	<li><a href="/wiki/Technique/T1122" title="Technique/T1122">Component Object Model Hijacking</a></li>
+	<li><a href="/wiki/Technique/T1055" title="Technique/T1055">DLL Injection</a></li>
+	<li><a href="/wiki/Technique/T1038" title="Technique/T1038">DLL Search Order Hijacking</a></li>
+	<li><a href="/wiki/Technique/T1073" title="Technique/T1073">DLL Side-Loading</a></li>
+	<li><a href="/wiki/Technique/T1140" title="Technique/T1140">Deobfuscate/Decode Files or Information</a></li>
+	<li><a href="/wiki/Technique/T1089" title="Technique/T1089">Disabling Security Tools</a></li>
+	<li><a href="/wiki/Technique/T1068" title="Technique/T1068">Exploitation of Vulnerability</a></li>
+	<li><a href="/wiki/Technique/T1107" title="Technique/T1107">File Deletion</a></li>
+	<li><a href="/wiki/Technique/T1006" title="Technique/T1006">File System Logical Offsets</a></li>
+	<li><a href="/wiki/Technique/T1144" title="Technique/T1144">Gatekeeper Bypass</a></li>
+	<li><a href="/wiki/Technique/T1148" title="Technique/T1148">HISTCONTROL</a></li>
+	<li><a href="/wiki/Technique/T1158" title="Technique/T1158">Hidden Files and Directories</a></li>
+	<li><a href="/wiki/Technique/T1147" title="Technique/T1147">Hidden Users</a></li>
+	<li><a href="/wiki/Technique/T1143" title="Technique/T1143">Hidden Window</a></li>
+	<li><a href="/wiki/Technique/T1054" title="Technique/T1054">Indicator Blocking</a></li>
+	<li><a href="/wiki/Technique/T1066" title="Technique/T1066">Indicator Removal from Tools</a></li>
+	<li><a href="/wiki/Technique/T1070" title="Technique/T1070">Indicator Removal on Host</a></li>
+	<li><a href="/wiki/Technique/T1130" title="Technique/T1130">Install Root Certificate</a></li>
+	<li><a href="/wiki/Technique/T1118" title="Technique/T1118">InstallUtil</a></li>
+	<li><a href="/wiki/Technique/T1149" title="Technique/T1149">LC_MAIN Hijacking</a></li>
+	<li><a href="/wiki/Technique/T1152" title="Technique/T1152">Launchctl</a></li>
+	<li><a href="/wiki/Technique/T1036" title="Technique/T1036">Masquerading</a></li>
+	<li><a href="/wiki/Technique/T1112" title="Technique/T1112">Modify Registry</a></li>
+	<li><a href="/wiki/Technique/T1096" title="Technique/T1096">NTFS Extended Attributes</a></li>
+	<li><a href="/wiki/Technique/T1126" title="Technique/T1126">Network Share Connection Removal</a></li>
+	<li><a href="/wiki/Technique/T1027" title="Technique/T1027">Obfuscated Files or Information</a></li>
+	<li><a href="/wiki/Technique/T1150" title="Technique/T1150">Plist Modification</a></li>
+	<li><a href="/wiki/Technique/T1093" title="Technique/T1093">Process Hollowing</a></li>
+	<li><a href="/wiki/Technique/T1108" title="Technique/T1108">Redundant Access</a></li>
+	<li><a href="/wiki/Technique/T1121" title="Technique/T1121">Regsvcs/Regasm</a></li>
+	<li><a href="/wiki/Technique/T1117" title="Technique/T1117">Regsvr32</a></li>
+	<li><a href="/wiki/Technique/T1014" title="Technique/T1014">Rootkit</a></li>
+	<li><a href="/wiki/Technique/T1085" title="Technique/T1085">Rundll32</a></li>
+	<li><a href="/wiki/Technique/T1064" title="Technique/T1064">Scripting</a></li>
+	<li><a href="/wiki/Technique/T1045" title="Technique/T1045">Software Packing</a></li>
+	<li><a href="/wiki/Technique/T1151" title="Technique/T1151">Space after Filename</a></li>
+	<li><a href="/wiki/Technique/T1099" title="Technique/T1099">Timestomp</a></li>
+	<li><a href="/wiki/Technique/T1127" title="Technique/T1127">Trusted Developer Utilities</a></li>
+	<li><a href="/wiki/Technique/T1078" title="Technique/T1078">Valid Accounts</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr>
+<tr style="height:2px">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Lateral_Movement" title="Lateral Movement">Lateral Movement</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-even"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1155" title="Technique/T1155">AppleScript</a></li>
+	<li><a href="/wiki/Technique/T1017" title="Technique/T1017">Application Deployment Software</a></li>
+	<li><a href="/wiki/Technique/T1068" title="Technique/T1068">Exploitation of Vulnerability</a></li>
+	<li><a href="/wiki/Technique/T1037" title="Technique/T1037">Logon Scripts</a></li>
+	<li><a href="/wiki/Technique/T1075" title="Technique/T1075">Pass the Hash</a></li>
+	<li><a href="/wiki/Technique/T1097" title="Technique/T1097">Pass the Ticket</a></li>
+	<li><a href="/wiki/Technique/T1076" title="Technique/T1076">Remote Desktop Protocol</a></li>
+	<li><a href="/wiki/Technique/T1105" title="Technique/T1105">Remote File Copy</a></li>
+	<li><a href="/wiki/Technique/T1021" title="Technique/T1021">Remote Services</a></li>
+	<li><a href="/wiki/Technique/T1091" title="Technique/T1091">Replication Through Removable Media</a></li>
+	<li><a href="/wiki/Technique/T1051" title="Technique/T1051">Shared Webroot</a></li>
+	<li><a href="/wiki/Technique/T1080" title="Technique/T1080">Taint Shared Content</a></li>
+	<li><a href="/wiki/Technique/T1072" title="Technique/T1072">Third-party Software</a></li>
+	<li><a href="/wiki/Technique/T1077" title="Technique/T1077">Windows Admin Shares</a></li>
+	<li><a href="/wiki/Technique/T1028" title="Technique/T1028">Windows Remote Management</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr>
+<tr style="height:2px">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Execution" title="Execution">Execution</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-odd"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1155" title="Technique/T1155">AppleScript</a></li>
+	<li><a href="/wiki/Technique/T1138" title="Technique/T1138">Application Shimming</a></li>
+	<li><a href="/wiki/Technique/T1059" title="Technique/T1059">Command-Line Interface</a></li>
+	<li><a href="/wiki/Technique/T1106" title="Technique/T1106">Execution through API</a></li>
+	<li><a href="/wiki/Technique/T1129" title="Technique/T1129">Execution through Module Load</a></li>
+	<li><a href="/wiki/Technique/T1061" title="Technique/T1061">Graphical User Interface</a></li>
+	<li><a href="/wiki/Technique/T1118" title="Technique/T1118">InstallUtil</a></li>
+	<li><a href="/wiki/Technique/T1152" title="Technique/T1152">Launchctl</a></li>
+	<li><a href="/wiki/Technique/T1086" title="Technique/T1086">PowerShell</a></li>
+	<li><a href="/wiki/Technique/T1093" title="Technique/T1093">Process Hollowing</a></li>
+	<li><a href="/wiki/Technique/T1121" title="Technique/T1121">Regsvcs/Regasm</a></li>
+	<li><a href="/wiki/Technique/T1117" title="Technique/T1117">Regsvr32</a></li>
+	<li><a href="/wiki/Technique/T1085" title="Technique/T1085">Rundll32</a></li>
+	<li><a href="/wiki/Technique/T1053" title="Technique/T1053">Scheduled Task</a></li>
+	<li><a href="/wiki/Technique/T1064" title="Technique/T1064">Scripting</a></li>
+	<li><a href="/wiki/Technique/T1035" title="Technique/T1035">Service Execution</a></li>
+	<li><a href="/wiki/Technique/T1153" title="Technique/T1153">Source</a></li>
+	<li><a href="/wiki/Technique/T1151" title="Technique/T1151">Space after Filename</a></li>
+	<li><a href="/wiki/Technique/T1072" title="Technique/T1072">Third-party Software</a></li>
+	<li><a href="/wiki/Technique/T1154" title="Technique/T1154">Trap</a></li>
+	<li><a href="/wiki/Technique/T1127" title="Technique/T1127">Trusted Developer Utilities</a></li>
+	<li><a href="/wiki/Technique/T1047" title="Technique/T1047">Windows Management Instrumentation</a></li>
+	<li><a href="/wiki/Technique/T1028" title="Technique/T1028">Windows Remote Management</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr>
+<tr style="height:2px">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Collection" title="Collection">Collection</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-even"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1123" title="Technique/T1123">Audio Capture</a></li>
+	<li><a href="/wiki/Technique/T1119" title="Technique/T1119">Automated Collection</a></li>
+	<li><a href="/wiki/Technique/T1115" title="Technique/T1115">Clipboard Data</a></li>
+	<li><a href="/wiki/Technique/T1074" title="Technique/T1074">Data Staged</a></li>
+	<li><a href="/wiki/Technique/T1005" title="Technique/T1005">Data from Local System</a></li>
+	<li><a href="/wiki/Technique/T1039" title="Technique/T1039">Data from Network Shared Drive</a></li>
+	<li><a href="/wiki/Technique/T1025" title="Technique/T1025">Data from Removable Media</a></li>
+	<li><a href="/wiki/Technique/T1114" title="Technique/T1114">Email Collection</a></li>
+	<li><a href="/wiki/Technique/T1056" title="Technique/T1056">Input Capture</a></li>
+	<li><a href="/wiki/Technique/T1113" title="Technique/T1113">Screen Capture</a></li>
+	<li><a href="/wiki/Technique/T1125" title="Technique/T1125">Video Capture</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr>
+<tr style="height:2px">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Exfiltration" title="Exfiltration">Exfiltration</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-odd"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1020" title="Technique/T1020">Automated Exfiltration</a></li>
+	<li><a href="/wiki/Technique/T1002" title="Technique/T1002">Data Compressed</a></li>
+	<li><a href="/wiki/Technique/T1022" title="Technique/T1022">Data Encrypted</a></li>
+	<li><a href="/wiki/Technique/T1030" title="Technique/T1030">Data Transfer Size Limits</a></li>
+	<li><a href="/wiki/Technique/T1048" title="Technique/T1048">Exfiltration Over Alternative Protocol</a></li>
+	<li><a href="/wiki/Technique/T1041" title="Technique/T1041">Exfiltration Over Command and Control Channel</a></li>
+	<li><a href="/wiki/Technique/T1011" title="Technique/T1011">Exfiltration Over Other Network Medium</a></li>
+	<li><a href="/wiki/Technique/T1052" title="Technique/T1052">Exfiltration Over Physical Medium</a></li>
+	<li><a href="/wiki/Technique/T1029" title="Technique/T1029">Scheduled Transfer</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr>
+<tr style="height:2px">
+<td>
+</td></tr>
+<tr>
+<td class="navbox-group" style=";;"> <a href="/wiki/Command_and_Control" title="Command and Control">Command and Control</a>
+</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd; width:100%;padding:0px;;;" class="navbox-list navbox-even"> <div style="padding:0em 0.25em">
+<div class="hlist" style="margin-left: 0em;"><ul>
+	<li><a href="/wiki/Technique/T1043" title="Technique/T1043">Commonly Used Port</a></li>
+	<li><a href="/wiki/Technique/T1092" title="Technique/T1092">Communication Through Removable Media</a></li>
+	<li><a href="/wiki/Technique/T1090" title="Technique/T1090">Connection Proxy</a></li>
+	<li><a href="/wiki/Technique/T1094" title="Technique/T1094">Custom Command and Control Protocol</a></li>
+	<li><a href="/wiki/Technique/T1024" title="Technique/T1024">Custom Cryptographic Protocol</a></li>
+	<li><a href="/wiki/Technique/T1132" title="Technique/T1132">Data Encoding</a></li>
+	<li><a href="/wiki/Technique/T1001" title="Technique/T1001">Data Obfuscation</a></li>
+	<li><a href="/wiki/Technique/T1008" title="Technique/T1008">Fallback Channels</a></li>
+	<li><a href="/wiki/Technique/T1104" title="Technique/T1104">Multi-Stage Channels</a></li>
+	<li><a href="/wiki/Technique/T1026" title="Technique/T1026">Multiband Communication</a></li>
+	<li><a href="/wiki/Technique/T1079" title="Technique/T1079">Multilayer Encryption</a></li>
+	<li><a href="/wiki/Technique/T1105" title="Technique/T1105">Remote File Copy</a></li>
+	<li><a href="/wiki/Technique/T1071" title="Technique/T1071">Standard Application Layer Protocol</a></li>
+	<li><a href="/wiki/Technique/T1032" title="Technique/T1032">Standard Cryptographic Protocol</a></li>
+	<li><a href="/wiki/Technique/T1095" title="Technique/T1095">Standard Non-Application Layer Protocol</a></li>
+	<li><a href="/wiki/Technique/T1065" title="Technique/T1065">Uncommonly Used Port</a></li>
+	<li><a href="/wiki/Technique/T1102" title="Technique/T1102">Web Service</a></li>
+</ul>
+<p><br />
+</p>
+</div></div>
+</td></tr></table>
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Cached time: 20170810174439
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In�?text annotation parser time: 0.819 seconds
+CPU time usage: 1.333 seconds
+Real time usage: 1.527 seconds
+Preprocessor visited node count: 1348/1000000
+Preprocessor generated node count: 10081/1000000
+Post�?expand include size: 157039/2097152 bytes
+Template argument size: 73774/2097152 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 0/100
+Lua time usage: 0.008/7.000 seconds
+Lua memory usage: 395 KB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  554.563      1 - -total
+100.00%  554.563      1 - Template:Technique
+ 56.55%  313.588      1 - Template:Adversary_Techniques
+ 56.00%  310.543      1 - Template:Navbox
+ 46.82%  259.656     10 - Template:Flatlist
+ 13.55%   75.137      6 - Template:LinkBySoftwareAlias
+  8.24%   45.686      1 - Template:Infobox_Technique
+  7.73%   42.845      1 - Template:Infobox
+  5.23%   29.006      5 - Template:LinkByID
+  0.85%    4.717      1 - Template:Navbar
+-->
+
+<!-- Saved in parser cache with key enterprise:pcache:idhash:189-0!*!0!default!!en!*!* and timestamp 20170810174437 and revision id 1338
+ -->
+<div class="hf-footer"></div><div class="hf-nsfooter"></div></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://attack.mitre.org/w/index.php?title=Technique/T1003&amp;oldid=1338">https://attack.mitre.org/w/index.php?title=Technique/T1003&amp;oldid=1338</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Credential_Access" title="Category:Credential Access">Credential Access</a></li><li><a href="/wiki/Category:Technique" title="Category:Technique">Technique</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Technique%2FT1003" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Technique/T1003"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Talk:Technique/T1003&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Discussion</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Technique/T1003" >Read</a></span></li>
+															<li id="ca-formedit" class="collapsible"><span><a href="/w/index.php?title=Technique/T1003&amp;action=formedit"  title="Edit this page with a form [&amp;]" accesskey="&amp;">View form</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Technique/T1003&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search enterprise" title="Search enterprise [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li><li id="n-Contribute"><a href="/wiki/Contribute">Contribute</a></li><li id="n-References"><a href="/wiki/Reference_list">References</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-Tactics' aria-labelledby='p-Tactics-label'>
+			<h3 id='p-Tactics-label'>Tactics</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Persistence"><a href="/wiki/Persistence">Persistence</a></li><li id="n-Privilege-Escalation"><a href="/wiki/Privilege_Escalation">Privilege Escalation</a></li><li id="n-Defense-Evasion"><a href="/wiki/Defense_Evasion">Defense Evasion</a></li><li id="n-Credential-Access"><a href="/wiki/Credential_Access">Credential Access</a></li><li id="n-Discovery"><a href="/wiki/Discovery">Discovery</a></li><li id="n-Lateral-Movement"><a href="/wiki/Lateral_Movement">Lateral Movement</a></li><li id="n-Execution"><a href="/wiki/Execution">Execution</a></li><li id="n-Collection"><a href="/wiki/Collection">Collection</a></li><li id="n-Exfiltration"><a href="/wiki/Exfiltration">Exfiltration</a></li><li id="n-Command-and-Control"><a href="/wiki/Command_and_Control">Command and Control</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-Techniques' aria-labelledby='p-Techniques-label'>
+			<h3 id='p-Techniques-label'>Techniques</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-All-Techniques"><a href="/wiki/All_Techniques">All Techniques</a></li><li id="n-Technique-Matrix"><a href="/wiki/Technique_Matrix">Technique Matrix</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-Groups' aria-labelledby='p-Groups-label'>
+			<h3 id='p-Groups-label'>Groups</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-All-Groups"><a href="/wiki/Groups">All Groups</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-Software' aria-labelledby='p-Software-label'>
+			<h3 id='p-Software-label'>Software</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-All-Software"><a href="/wiki/Software">All Software</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Technique/T1003" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Technique/T1003" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/w/index.php?title=Technique/T1003&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/w/index.php?title=Technique/T1003&amp;oldid=1338" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Technique/T1003&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="/wiki/Special:Browse/:Technique-2FT1003" rel="smw-browse">Browse properties</a></li>					</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 8 August 2017, at 13:08.</li>
+											<li id="footer-info-viewcount">This page has been accessed 809 times.</li>
+											<li id="footer-info-copyright">Copyright &copy; 2017, The MITRE Corporation. ATT&CK and ATT&CK Matrix are trademarks of The MITRE Corporation</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/wiki/enterprise:Privacy_policy" title="enterprise:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/enterprise:Terms_of_Use" title="enterprise:Terms of Use">Terms of Use</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-poweredbyico">
+							<a href="https://www.mitre.org/"><img src="https://attack.mitre.org/wiki/branding/mitrelogo.png" alt="The Mitre Corporation" height="36" width="125"/></a><a href="http://www.mediawiki.org/"><img src="/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a><a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="/w/extensions/SemanticMediaWiki/includes/../res/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.smw.tooltips","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.scite.tooltip","ext.JSBreadCrumbs","ext.headertabs","ext.headertabs.large","ext.InactivityTimeout"]);});</script>
+<style>.MathJax_Display{display:inline !important;}
+.mathjax-wrapper{font-size:100%;}</style>
+<script type='text/x-mathjax-config'>MathJax.Hub.Config({displayAlign:'left',tex2jax:{displayMath:[['[math]','[/math]']]}})</script>
+<script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+	<script src='https://mpn.mitre.org/static/header/mpn_header.js'>
+	</script>
+<!-- You need to set the settings for Piwik --><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":370});});</script>
+	</body>
+</html>
+
