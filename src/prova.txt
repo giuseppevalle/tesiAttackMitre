@@ -2,9 +2,9 @@ null<!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
-<title>Sudo - enterprise</title>
+<title>Launch Daemon - enterprise</title>
 <script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
-<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Technique/T1169","wgTitle":"Technique/T1169","wgCurRevisionId":1320,"wgRevisionId":1320,"wgArticleId":1319,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Privilege Escalation","Technique"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Technique/T1169","wgRelevantArticleId":1319,"wgRequestId":"WfGbS7UEdOEASXB0UI35JwAAAAQ","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"srfFilteredConfig":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":false},"wgHeaderTabsTabIndexes":[],"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":false,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/w/extensions/PageForms","edgValues":[],"wgPageFormsEDSettings":null,"egMapsDebugJS":false,"egMapsAvailableServices":["googlemaps3","openlayers","leaflet"],"InactivityTimeout":{"timeout":3600000,"message":"This session will be logged out in one minute if there is no activity."},"wgJSBreadCrumbsCSSSelector":"#top","wgJSBreadCrumbsMaxCrumbs":5,"wgJSBreadCrumbsShowSidebar":true,"wgJSBreadCrumbsPervasiveWikiFarm":false,"wgJSBreadCrumbsSeparator":"Â»","wgJSBreadCrumbsCookiePath":"/","wgJSBreadCrumbsLeadingDescription":"Last Pages Viewed","wgJSBreadCrumbsShowSiteName":false,"wgJSBreadCrumbsPageName":"Sudo"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.scite.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@0syrvvp",function ( $, jQuery, require, module ) {
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Technique/T1160","wgTitle":"Technique/T1160","wgCurRevisionId":1285,"wgRevisionId":1285,"wgArticleId":1284,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Persistence","Privilege Escalation","Technique"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Technique/T1160","wgRelevantArticleId":1284,"wgRequestId":"Wd@7IXBPjsRS7y0wGiyHYAAAAAE","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"srfFilteredConfig":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":false},"wgHeaderTabsTabIndexes":[],"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":false,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/w/extensions/PageForms","edgValues":[],"wgPageFormsEDSettings":null,"egMapsDebugJS":false,"egMapsAvailableServices":["googlemaps3","openlayers","leaflet"],"InactivityTimeout":{"timeout":3600000,"message":"This session will be logged out in one minute if there is no activity."},"wgJSBreadCrumbsCSSSelector":"#top","wgJSBreadCrumbsMaxCrumbs":5,"wgJSBreadCrumbsShowSidebar":true,"wgJSBreadCrumbsPervasiveWikiFarm":false,"wgJSBreadCrumbsSeparator":"Â»","wgJSBreadCrumbsCookiePath":"/","wgJSBreadCrumbsLeadingDescription":"Last Pages Viewed","wgJSBreadCrumbsShowSiteName":false,"wgJSBreadCrumbsPageName":"Launch Daemon"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.scite.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@0syrvvp",function ( $, jQuery, require, module ) {
 mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
 
 });mw.loader.load(["ext.smw.style","mediawiki.page.startup","ext.scite.styles","skins.vector.js"]);});</script>
@@ -14,46 +14,47 @@ mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","cs
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 <link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
 <meta name="generator" content="MediaWiki 1.28.0"/>
-<link rel="ExportRDF" type="application/rdf+xml" title="Technique/T1169" href="/w/index.php?title=Special:ExportRDF/Technique/T1169&amp;xmlmime=rdf"/>
+<link rel="ExportRDF" type="application/rdf+xml" title="Technique/T1160" href="/w/index.php?title=Special:ExportRDF/Technique/T1160&amp;xmlmime=rdf"/>
 <link rel="shortcut icon" href="/favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="enterprise (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="https://attack.mitre.org/w/api.php?action=rsd"/>
 <link rel="copyright" href="/wiki/MediaWiki:Copyright"/>
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Technique_T1169 rootpage-Technique_T1169 skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Technique_T1160 rootpage-Technique_T1160 skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
 		<div id="mw-head-base" class="noprint"></div>
 		<div id="content" class="mw-body" role="main">
 			<a id="top"></a>
 
 						<div class="mw-indicators">
 </div>
-			<h1 id="firstHeading" class="firstHeading" lang="en">Sudo</h1>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Launch Daemon</h1>
 									<div id="bodyContent" class="mw-body-content">
 									<div id="siteSub">From enterprise</div>
 								<div id="contentSub"></div>
 												<div id="jump-to-nav" class="mw-jump">
 					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
 				</div>
-				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="hf-nsheader"></div><div class="hf-header"></div><table class="infobox" cellspacing="3" style="border-spacing:3px;width:22em;"><tr><th colspan="2" style="text-align:center;font-size:125%;font-weight:bold;">Sudo</th></tr><tr><th colspan="2" style="text-align:center;">Technique</th></tr><tr><th scope="row" style="text-align:left;">ID</th><td>
-T1169</td></tr><tr><th scope="row" style="text-align:left;">Tactic</th><td>
-Privilege Escalation</td></tr><tr><th scope="row" style="text-align:left;">Platform</th><td>
-<span class="nowrap">Linux</span>, <span class="nowrap">MacOS</span>, <span class="nowrap">OS X</span></td></tr><tr><th scope="row" style="text-align:left;">Permissions Required</th><td>
-User</td></tr><tr><th scope="row" style="text-align:left;">Effective Permissions</th><td>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="hf-nsheader"></div><div class="hf-header"></div><table class="infobox" cellspacing="3" style="border-spacing:3px;width:22em;"><tr><th colspan="2" style="text-align:center;font-size:125%;font-weight:bold;">Launch Daemon</th></tr><tr><th colspan="2" style="text-align:center;">Technique</th></tr><tr><th scope="row" style="text-align:left;">ID</th><td>
+T1160</td></tr><tr><th scope="row" style="text-align:left;">Tactic</th><td>
+Persistence, Privilege Escalation</td></tr><tr><th scope="row" style="text-align:left;">Platform</th><td>
+<span class="nowrap">MacOS</span>, <span class="nowrap">OS X</span></td></tr><tr><th scope="row" style="text-align:left;">Permissions Required</th><td>
+Administrator</td></tr><tr><th scope="row" style="text-align:left;">Effective Permissions</th><td>
 root</td></tr><tr><th scope="row" style="text-align:left;">Data Sources</th><td>
-<span class="nowrap">File monitoring</span></td></tr></table>
-<p>The sudoers file, <code>/etc/sudoers</code>, describes which users can run which commands and from which terminals. This also describes which commands users can run as other users or groups. This provides the idea of least privilege such that users are running in their lowest possible permissions for most of the time and only elevate to other users or permissions as needed, typically by prompting for a password. However, the sudoers file can also specify when to not prompt users for passwords with a line like <code>user1 ALL=(ALL) NOPASSWD: ALL</code><span id="scite-ref-a1e1b1a842cfeed6852239bc9293cccd-1-a" class="scite-citeref-number" data-reference="OSX.Dok Malware"><a href="#scite-a1e1b1a842cfeed6852239bc9293cccd">1</a></span>. 
-</p><p>Adversaries can take advantage of these configurations to execute commands as other users or spawn processes with higher privileges. You must have elevated privileges to edit this file though.
+<span class="nowrap">Process Monitoring</span>, <span class="nowrap">File monitoring</span></td></tr></table>
+<p>Per Appleâ€™s developer documentation, when macOS and OS X boot up, launchd is run to finish system initialization. This process loads the parameters for each launch-on-demand system-level daemon from the property list (plist) files found in <code>/System/Library/LaunchDaemons</code> and <code>/Library/LaunchDaemons</code><span id="scite-ref-418393c65b829ecd4eef686e5a288625-1-a" class="scite-citeref-number" data-reference="AppleDocs Launch Agent Daemons"><a href="#scite-418393c65b829ecd4eef686e5a288625">1</a></span>. These LaunchDaemons have property list files which point to the executables that will be launched<span id="scite-ref-58a706cc061511d9d15afd2d7f6ba6d6-2-a" class="scite-citeref-number" data-reference="Methods of Mac Malware Persistence"><a href="#scite-58a706cc061511d9d15afd2d7f6ba6d6">2</a></span>.
+</p><p>Adversaries may install a new launch daemon that can be configured to execute at startup by using launchd or launchctl to load a plist into the appropriate directories<span id="scite-ref-3e272e4e7bc4ceb79b39657db36a4154-3-a" class="scite-citeref-number" data-reference="OSX Malware Detection"><a href="#scite-3e272e4e7bc4ceb79b39657db36a4154">3</a></span>. The daemon name may be disguised by using a name from a related operating system or benign software <span id="scite-ref-cd67d5a08cb8e6eaaf3ba4731fe2e88e-4-a" class="scite-citeref-number" data-reference="WireLurker"><a href="#scite-cd67d5a08cb8e6eaaf3ba4731fe2e88e">4</a></span>. Launch Daemons may be created with administrator privileges, but are executed under root privileges, so an adversary may also use a service to escalate privileges from administrator to root.
+</p><p>The plist file permissions must be root:wheel, but the script or program that it points to has no such requirement. So, it is possible for poor configurations to allow an adversary to modify a current Launch Daemonâ€™s executable and gain persistence or Privilege Escalation.
 </p><p>&#32;
 
 </p>
 <h2><span class="mw-headline" id="Mitigation">Mitigation</span></h2>
-<p>The sudoers file should be strictly edited such that passwords are always required and that users canâ€™t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.
+<p>Limit privileges of user accounts and remediate Privilege Escalation vectors so only authorized administrators can create new Launch Daemons.
 </p>
 <h2><span class="mw-headline" id="Detection">Detection</span></h2>
-<p>On Linux, auditd can alert every time a user's actual ID and effective ID are different (this is what happens when you sudo).
+<p>Monitor Launch Daemon creation through additional plist files and utilities such as Objective-See's Knock Knock application.
 </p>
 <div class="scite-content"><h2 id="References">References</h2>
-<div class="scite-referencelist" dir="ltr"><div class="scite-referencelist-columns-fixed" style="width:50%;" dir="ltr"><ol start=1><li><span id="scite-a1e1b1a842cfeed6852239bc9293cccd" class="scite-referencelinks"><a href="#scite-ref-a1e1b1a842cfeed6852239bc9293cccd-1-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-a1e1b1a842cfeed6852239bc9293cccd" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F492-23-5FSCITEa1e1b1a842cfeed6852239bc9293cccd" title="Special:Browse/:Reference-2F492-23-5FSCITEa1e1b1a842cfeed6852239bc9293cccd">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://blog.malwarebytes.com/threat-analysis/2017/04/new-osx-dok-malware-intercepts-web-traffic/">Thomas Reed. (2017, July 7). New OSX.Dok malware intercepts web traffic. Retrieved July 10, 2017.</a></span></span></li></ol></div> <!-- end column -->
+<div class="scite-referencelist" dir="ltr"><div class="scite-referencelist-columns-fixed" style="width:50%;" dir="ltr"><ol start=1><li><span id="scite-418393c65b829ecd4eef686e5a288625" class="scite-referencelinks"><a href="#scite-ref-418393c65b829ecd4eef686e5a288625-1-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-418393c65b829ecd4eef686e5a288625" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F490-23-5FSCITE418393c65b829ecd4eef686e5a288625" title="Special:Browse/:Reference-2F490-23-5FSCITE418393c65b829ecd4eef686e5a288625">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html">Apple. (n.d.). Creating Launch Daemons and Agents. Retrieved July 10, 2017.</a></span></span></li><li><span id="scite-58a706cc061511d9d15afd2d7f6ba6d6" class="scite-referencelinks"><a href="#scite-ref-58a706cc061511d9d15afd2d7f6ba6d6-2-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-58a706cc061511d9d15afd2d7f6ba6d6" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F476-23-5FSCITE58a706cc061511d9d15afd2d7f6ba6d6" title="Special:Browse/:Reference-2F476-23-5FSCITE58a706cc061511d9d15afd2d7f6ba6d6">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf">Patrick Wardle. (2014, September). Methods of Malware Persistence on Mac OS X. Retrieved July 5, 2017.</a></span></span></li></ol></div> <!-- end column --><div class="scite-referencelist-columns-fixed" style="width:50%;" dir="ltr"><ol start=3><li><span id="scite-3e272e4e7bc4ceb79b39657db36a4154" class="scite-referencelinks"><a href="#scite-ref-3e272e4e7bc4ceb79b39657db36a4154-3-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-3e272e4e7bc4ceb79b39657db36a4154" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F491-23-5FSCITE3e272e4e7bc4ceb79b39657db36a4154" title="Special:Browse/:Reference-2F491-23-5FSCITE3e272e4e7bc4ceb79b39657db36a4154">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.synack.com/wp-content/uploads/2016/03/RSA_OSX_Malware.pdf">Patrick Wardle. (2016, February 29). Let's Play Doctor: Practical OS X Malware Detection &amp; Analysis. Retrieved July 10, 2017.</a></span></span></li><li><span id="scite-cd67d5a08cb8e6eaaf3ba4731fe2e88e" class="scite-referencelinks"><a href="#scite-ref-cd67d5a08cb8e6eaaf3ba4731fe2e88e-4-a" class="scite-backlink" data-citeref-format="number">^</a></span>&nbsp;<span id="scite-cd67d5a08cb8e6eaaf3ba4731fe2e88e" class="scite-citation"><span class="scite-citation-resourcelink"><a href="/wiki/Special:Browse/:Reference-2F489-23-5FSCITEcd67d5a08cb8e6eaaf3ba4731fe2e88e" title="Special:Browse/:Reference-2F489-23-5FSCITEcd67d5a08cb8e6eaaf3ba4731fe2e88e">&#8593;</a></span>&nbsp;<span class="scite-citation-text"><a rel="nofollow" class="external text" href="https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/reports/Unit_42/unit42-wirelurker.pdf">Claud Xiao. (n.d.). WireLurker: A New Era in iOS and OS X Malware. Retrieved July 10, 2017.</a></span></span></li></ol></div> <!-- end column -->
 <br style="clear: both;"/></div>
 </div>
 <p>&#32;
@@ -93,7 +94,7 @@ root</td></tr><tr><th scope="row" style="text-align:left;">Data Sources</th><td>
 	<li><a href="/wiki/Technique/T1062" title="Technique/T1062">Hypervisor</a></li>
 	<li><a href="/wiki/Technique/T1161" title="Technique/T1161">LC_LOAD_DYLIB Addition</a></li>
 	<li><a href="/wiki/Technique/T1159" title="Technique/T1159">Launch Agent</a></li>
-	<li><a href="/wiki/Technique/T1160" title="Technique/T1160">Launch Daemon</a></li>
+	<li><strong class="selflink">Launch Daemon</strong></li>
 	<li><a href="/wiki/Technique/T1152" title="Technique/T1152">Launchctl</a></li>
 	<li><a href="/wiki/Technique/T1013" title="Technique/T1013">Local Port Monitor</a></li>
 	<li><a href="/wiki/Technique/T1162" title="Technique/T1162">Login Item</a></li>
@@ -142,7 +143,7 @@ root</td></tr><tr><th scope="row" style="text-align:left;">Data Sources</th><td>
 	<li><a href="/wiki/Technique/T1157" title="Technique/T1157">Dylib Hijacking</a></li>
 	<li><a href="/wiki/Technique/T1068" title="Technique/T1068">Exploitation of Vulnerability</a></li>
 	<li><a href="/wiki/Technique/T1044" title="Technique/T1044">File System Permissions Weakness</a></li>
-	<li><a href="/wiki/Technique/T1160" title="Technique/T1160">Launch Daemon</a></li>
+	<li><strong class="selflink">Launch Daemon</strong></li>
 	<li><a href="/wiki/Technique/T1013" title="Technique/T1013">Local Port Monitor</a></li>
 	<li><a href="/wiki/Technique/T1050" title="Technique/T1050">New Service</a></li>
 	<li><a href="/wiki/Technique/T1034" title="Technique/T1034">Path Interception</a></li>
@@ -151,7 +152,7 @@ root</td></tr><tr><th scope="row" style="text-align:left;">Data Sources</th><td>
 	<li><a href="/wiki/Technique/T1058" title="Technique/T1058">Service Registry Permissions Weakness</a></li>
 	<li><a href="/wiki/Technique/T1166" title="Technique/T1166">Setuid and Setgid</a></li>
 	<li><a href="/wiki/Technique/T1165" title="Technique/T1165">Startup Items</a></li>
-	<li><strong class="selflink">Sudo</strong></li>
+	<li><a href="/wiki/Technique/T1169" title="Technique/T1169">Sudo</a></li>
 	<li><a href="/wiki/Technique/T1078" title="Technique/T1078">Valid Accounts</a></li>
 	<li><a href="/wiki/Technique/T1100" title="Technique/T1100">Web Shell</a></li>
 </ul>
@@ -418,40 +419,40 @@ root</td></tr><tr><th scope="row" style="text-align:left;">Data Sources</th><td>
 
 <!-- 
 NewPP limit report
-Cached time: 20171026034044
+Cached time: 20171012001547
 Cache expiry: 86400
 Dynamic content: false
-[SMW] Inâ€?text annotation parser time: 0.006 seconds
-CPU time usage: 0.529 seconds
-Real time usage: 0.549 seconds
-Preprocessor visited node count: 1099/1000000
-Preprocessor generated node count: 9536/1000000
-Postâ€?expand include size: 108094/2097152 bytes
-Template argument size: 61431/2097152 bytes
+[SMW] Inâ€?text annotation parser time: 0.02 seconds
+CPU time usage: 0.608 seconds
+Real time usage: 0.743 seconds
+Preprocessor visited node count: 1104/1000000
+Preprocessor generated node count: 9544/1000000
+Postâ€?expand include size: 109107/2097152 bytes
+Template argument size: 62756/2097152 bytes
 Highest expansion depth: 9/40
 Expensive parser function count: 0/100
-Lua time usage: 0.009/7.000 seconds
-Lua memory usage: 393 KB/50 MB
+Lua time usage: 0.008/7.000 seconds
+Lua memory usage: 392 KB/50 MB
 -->
 
 <!-- 
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  451.439      1 - Template:Technique
-100.00%  451.439      1 - -total
- 70.74%  319.333      1 - Template:Adversary_Techniques
- 70.08%  316.365      1 - Template:Navbox
- 58.67%  264.855     10 - Template:Flatlist
-  9.52%   42.982      1 - Template:Infobox_Technique
-  8.81%   39.757      1 - Template:Infobox
-  1.01%    4.575      1 - Template:Navbar
-  0.44%    1.979      4 - Template:Nowrap
+100.00%  606.190      1 - Template:Technique
+100.00%  606.190      1 - -total
+ 76.19%  461.835      1 - Template:Adversary_Techniques
+ 75.56%  458.029      1 - Template:Navbox
+ 65.22%  395.355     10 - Template:Flatlist
+  7.46%   45.194      1 - Template:Infobox_Technique
+  6.86%   41.559      1 - Template:Infobox
+  0.93%    5.635      1 - Template:Navbar
+  0.38%    2.326      4 - Template:Nowrap
 -->
 
-<!-- Saved in parser cache with key enterprise:pcache:idhash:1319-0!*!0!default!!en!*!* and timestamp 20171026034043 and revision id 1320
+<!-- Saved in parser cache with key enterprise:pcache:idhash:1284-0!*!0!default!!en!*!* and timestamp 20171012001546 and revision id 1285
  -->
 <div class="hf-footer"></div><div class="hf-nsfooter"></div></div>					<div class="printfooter">
-						Retrieved from "<a dir="ltr" href="https://attack.mitre.org/w/index.php?title=Technique/T1169&amp;oldid=1320">https://attack.mitre.org/w/index.php?title=Technique/T1169&amp;oldid=1320</a>"					</div>
-				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Privilege_Escalation" title="Category:Privilege Escalation">Privilege Escalation</a></li><li><a href="/wiki/Category:Technique" title="Category:Technique">Technique</a></li></ul></div></div>				<div class="visualClear"></div>
+						Retrieved from "<a dir="ltr" href="https://attack.mitre.org/w/index.php?title=Technique/T1160&amp;oldid=1285">https://attack.mitre.org/w/index.php?title=Technique/T1160&amp;oldid=1285</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Persistence" title="Category:Persistence">Persistence</a></li><li><a href="/wiki/Category:Privilege_Escalation" title="Category:Privilege Escalation">Privilege Escalation</a></li><li><a href="/wiki/Category:Technique" title="Category:Technique">Technique</a></li></ul></div></div>				<div class="visualClear"></div>
 							</div>
 		</div>
 		<div id="mw-navigation">
@@ -461,14 +462,14 @@ Transclusion expansion time report (%,ms,calls,template)
 									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
 						<h3 id="p-personal-label">Personal tools</h3>
 						<ul>
-							<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Technique%2FT1169" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+							<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Technique%2FT1160" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
 					</div>
 									<div id="left-navigation">
 										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
 						<h3 id="p-namespaces-label">Namespaces</h3>
 						<ul>
-															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Technique/T1169"  title="View the content page [c]" accesskey="c">Page</a></span></li>
-															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Talk:Technique/T1169&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Discussion</a></span></li>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Technique/T1160"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Talk:Technique/T1160&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Discussion</a></span></li>
 													</ul>
 					</div>
 										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
@@ -486,9 +487,9 @@ Transclusion expansion time report (%,ms,calls,template)
 										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
 						<h3 id="p-views-label">Views</h3>
 						<ul>
-															<li id="ca-view" class="selected"><span><a href="/wiki/Technique/T1169" >Read</a></span></li>
-															<li id="ca-formedit" class="collapsible"><span><a href="/w/index.php?title=Technique/T1169&amp;action=formedit"  title="Edit this page with a form [&amp;]" accesskey="&amp;">View form</a></span></li>
-															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Technique/T1169&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Technique/T1160" >Read</a></span></li>
+															<li id="ca-formedit" class="collapsible"><span><a href="/w/index.php?title=Technique/T1160&amp;action=formedit"  title="Edit this page with a form [&amp;]" accesskey="&amp;">View form</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Technique/T1160&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
 													</ul>
 					</div>
 										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
@@ -558,15 +559,15 @@ Transclusion expansion time report (%,ms,calls,template)
 
 			<div class="body">
 									<ul>
-						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Technique/T1169" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Technique/T1169" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/w/index.php?title=Technique/T1169&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/w/index.php?title=Technique/T1169&amp;oldid=1320" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Technique/T1169&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="/wiki/Special:Browse/:Technique-2FT1169" rel="smw-browse">Browse properties</a></li>					</ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Technique/T1160" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Technique/T1160" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/w/index.php?title=Technique/T1160&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/w/index.php?title=Technique/T1160&amp;oldid=1285" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Technique/T1160&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="/wiki/Special:Browse/:Technique-2FT1160" rel="smw-browse">Browse properties</a></li>					</ul>
 							</div>
 		</div>
 				</div>
 		</div>
 		<div id="footer" role="contentinfo">
 							<ul id="footer-info">
-											<li id="footer-info-lastmod"> This page was last modified on 18 July 2017, at 15:45.</li>
-											<li id="footer-info-viewcount">This page has been accessed 853 times.</li>
+											<li id="footer-info-lastmod"> This page was last modified on 18 July 2017, at 14:55.</li>
+											<li id="footer-info-viewcount">This page has been accessed 782 times.</li>
 											<li id="footer-info-copyright">Copyright &copy; 2017, The MITRE Corporation. ATT&CK and ATT&CK Matrix are trademarks of The MITRE Corporation</li>
 									</ul>
 							<ul id="footer-places">
@@ -589,7 +590,7 @@ Transclusion expansion time report (%,ms,calls,template)
 <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
-_paq.push(['setCustomDimension', 1, '79.53.89.102']);_paq.push(['setCustomVariable', '1', 'userName', '79.53.89.102']);
+_paq.push(['setCustomDimension', 1, '79.56.157.119']);_paq.push(['setCustomVariable', '1', 'userName', '79.56.157.119']);
   _paq.push(["trackPageView"]);
   _paq.push(["enableLinkTracking"]);
 
@@ -605,7 +606,7 @@ _paq.push(['setCustomDimension', 1, '79.53.89.102']);_paq.push(['setCustomVariab
 
 <!-- Piwik Image Tracker -->
 <noscript><img src="http://pedias.mitre.org/piwik//piwik.php?idsite=36&amp;rec=1" style="border:0" alt="" /></noscript>
-<!-- End Piwik --><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":309});});</script>
+<!-- End Piwik --><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":342});});</script>
 	</body>
 </html>
 

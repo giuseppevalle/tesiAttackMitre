@@ -20,7 +20,7 @@ import org.jsoup.select.Elements;
 
 import java.io.*;
 
-public class prova {
+public class tesi {
 	static Statement stu = null;
 	static Connection conn = null;
 	static int numExample = 0;
@@ -34,8 +34,8 @@ public class prova {
 	    BufferedReader inmain = new BufferedReader(new InputStreamReader(main.openStream()));
 	    while ((inputLine = inmain.readLine()) != null) {	
 	    	matrix+=inputLine+"\r\n";
-	    }	    
-    	for (n=1160; n<=1169; n++) {
+	    }
+    	for (n=1160; n<1170; n++) {
 		    String a = null;
 			
 			URL cg = new URL("https://attack.mitre.org/wiki/Technique/T"+n);
@@ -53,7 +53,7 @@ public class prova {
 			
 		    while ((inputLine = in.readLine()) != null) {
 		    		a+=inputLine+"\r\n";
-		    		System.out.println(inputLine);//togli
+		    		//System.out.println(inputLine);//togli
 		    }
 		    
 		    
@@ -67,8 +67,6 @@ public class prova {
 		    	System.exit(1);         
 		    }
 	    	Tecnica[n-1001] = new Technique(n,finalTitle); 			//creo gli oggetti tecniche con id e titolo
-	    	//Tecnica[n-1001].addPlatform("aaa");
-	    	//Tecnica[n-1001].addPlatform("aaa");Element content = doc1.getElementById("content");
 	    	String CAPEC="CAPEC";
 	    	String CAPECSQL1="";
 	    	String CAPECSQL2="";
@@ -208,7 +206,6 @@ public class prova {
 		    }catch(Exception e) {}
 		    in.close();           	        		       	       
 	   	}
-    	
     }
 	public static ArrayList<String> ricerca (String gen, String par) {
     	int i=0;
@@ -355,8 +352,9 @@ public class prova {
     	char[] newhtml = new char [1000];
     	String par = new String ("\"Examples\"");
     	String par1 = new String("\"Mitigation\"");
+    	String par2 = new String("\"Detection\"");
     	String html=null;
-    	int i=0;
+    	int i=0; //futura posizione di Examples
     	boolean cerca=false;
     	test:
     	    for (i = 0; i <= (gen.length()-par.length()); i++) {
@@ -371,7 +369,37 @@ public class prova {
     	      cerca = true;
     	      break test;
     	    }
-    	if(cerca==true){
+    	cerca=false;
+    	int p=0; //futura posizione di Mitigation
+    	test:
+    	    for (p = 0; p <= (gen.length()-par1.length()); p++) {
+    	      int lung = par1.length();
+    	      int j = p;
+    	      int k = 0;
+    	      while (lung-- != 0) {
+    	        if (gen.charAt(j++) != par1.charAt(k++)) {
+    	          continue test;
+    	        }
+    	      }
+    	      cerca = true;
+    	      break test;
+    	    }
+    	if(!cerca) {   		
+        	test:
+        	    for (p = 0; p <= (gen.length()-par2.length()); p++) {
+        	      int lung = par2.length();
+        	      int j = p;
+        	      int k = 0;
+        	      while (lung-- != 0) {
+        	        if (gen.charAt(j++) != par2.charAt(k++)) {
+        	          continue test;
+        	        }
+        	      }
+        	      cerca = true;
+        	      break test;
+        	    }
+    	}
+    	/*if(cerca==true){
     		int q=i;
     		for(int n=0; n<1000;n++) {
 	    		newhtml[n]=gen.charAt(n+q+par.length());
@@ -391,30 +419,36 @@ public class prova {
         	    } 
 	        if(cerca==false) break;
     		}
-    	}
-    	Document doc = Jsoup.parse(html);
-		Elements links = doc.getElementsByTag("a");
-		for (Element link : links) {		//tra i link mi escono gli esempi, mi puo essere utile 
-			  //System.out.print(link);
-			  String linkHref = link.attr("href");//prende la parte finale del link     (mi potrebbe essere utile solo per dire le tecniche ma per il resto no..)
-			  String linkText = link.text(); //prende quello che c'è nel link dopo i :
-			  //System.out.println(linkHref);//String ok = linkHref.replace("/", ok); togli
-			  //System.out.println(linkText); togli
-			  try {
-				    Integer.parseInt(linkText);
-			  }catch(Exception e){
-				  Esempi.add(linkText);
-				  //System.out.println("Ho aggiunto "+linkText); togli
-				  String IDExample = linkHref.substring(linkHref.lastIndexOf('/')+1);
-				  //System.out.println(IDExample); togli
-				  String type = linkHref.substring(linkHref.indexOf("/")+6);
-				  StringTokenizer ExampleToken= new StringTokenizer(type,"/");
-				  String TypeExample = ExampleToken.nextToken();
-				  //System.out.println(TypeExample); togli
-				  EX[numExample] = new Example(IDExample,linkText,TypeExample);
-				  numExample++;
-			  }
+    	}*/
+    	if((p-i)<7000) { //devo inserire questo controllo, se la stringa da analizzare è troppo grande jsoup ha problemi
+    	html = gen.substring(i,p);
+	    	System.out.println(html);
+	    	Document doc = Jsoup.parse(html);
+			Elements links = doc.getElementsByTag("a");
+			for (Element link : links) {		//tra i link mi escono gli esempi, mi puo essere utile 
+				  //System.out.print(link);
+				  String linkHref = link.attr("href");//prende la parte finale del link     (mi potrebbe essere utile solo per dire le tecniche ma per il resto no..)
+				  String linkText = link.text(); //prende quello che c'è nel link dopo i :
+				  //System.out.println(linkHref);//String ok = linkHref.replace("/", ok); togli
+				  //System.out.println(linkText); togli
+				  try {
+					    Integer.parseInt(linkText);
+				  }catch(Exception e){
+					  Esempi.add(linkText);
+					  //System.out.println("Ho aggiunto "+linkText); togli
+					  String IDExample = linkHref.substring(linkHref.lastIndexOf('/')+1);
+					  //System.out.println(IDExample); togli
+					  String type = linkHref.substring(linkHref.indexOf("/")+6);
+					  StringTokenizer ExampleToken= new StringTokenizer(type,"/");
+					  String TypeExample = ExampleToken.nextToken();
+					  //System.out.println(TypeExample); togli
+					  EX[numExample] = new Example(IDExample,linkText,TypeExample);
+					  numExample++;
+				 }
 			}
+    	}
+		p=0;
+		i=0;
 		return EX;
     }
     static void QuerySQLGEN (String Query) throws ClassNotFoundException {
